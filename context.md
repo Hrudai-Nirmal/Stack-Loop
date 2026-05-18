@@ -55,9 +55,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 10:41 | Synced context metadata after cyan-cream palette push | `context.md` | `e9de76d` | `main` | yes | Updated action log commit references |
 | 2026-05-19 10:47 | Applied requested warm-cream mustard wine palette to global tokens | `src/app/globals.css` | `b561268` | `main` | yes | Palette: `#FFEDD8`, `#EABE6C`, `#891652`, `#3D0301` |
 | 2026-05-19 10:48 | Re-verified lint/build after warm palette update | Build + lint outputs | `b561268` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-19 10:49 | Synced context metadata after warm-palette push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
-| 2026-05-19 10:55 | Added `#B03052` as a reusable highlight token to the palette | `src/app/globals.css` | pending | `main` | no | Added `--highlight` and `--color-highlight` variables |
-| 2026-05-19 10:56 | Re-verified lint/build after highlight token addition | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 10:49 | Synced context metadata after warm-palette push | `context.md` | `da1bc58` | `main` | yes | Updated latest commit SHA references |
+| 2026-05-19 10:55 | Added `#B03052` as a reusable highlight token to the palette | `src/app/globals.css` | `1340318` | `main` | yes | Added `--highlight` and `--color-highlight` variables |
+| 2026-05-19 10:56 | Re-verified lint/build after highlight token addition | Build + lint outputs | `1340318` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 10:57 | Synced context metadata after highlight-token push | `context.md` | pending | `main` | no | Updated action log commit references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
