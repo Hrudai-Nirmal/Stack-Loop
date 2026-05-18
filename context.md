@@ -46,9 +46,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 10:17 | Synced context metadata after header/palette push | `context.md` | `8d38fea` | `main` | yes | Updated action log commit references |
 | 2026-05-19 10:24 | Applied requested dark rose/plum palette to global theme tokens | `src/app/globals.css` | `b779014` | `main` | yes | Palette: `#E23E57`, `#88304E`, `#522546`, `#311D3F` |
 | 2026-05-19 10:25 | Re-verified lint/build after palette refresh | Build + lint outputs | `b779014` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-19 10:26 | Synced context metadata after dark-palette push | `context.md` | pending | `main` | no | Updated action log commit references |
-| 2026-05-19 10:32 | Applied requested pastel palette to global theme tokens | `src/app/globals.css` | pending | `main` | no | Palette: `#FFB6B9`, `#FAE3D9`, `#BBDED6`, `#61C0BF` |
-| 2026-05-19 10:33 | Re-verified lint/build after pastel palette update | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 10:26 | Synced context metadata after dark-palette push | `context.md` | `812aa5a` | `main` | yes | Updated action log commit references |
+| 2026-05-19 10:32 | Applied requested pastel palette to global theme tokens | `src/app/globals.css` | `9035664` | `main` | yes | Palette: `#FFB6B9`, `#FAE3D9`, `#BBDED6`, `#61C0BF` |
+| 2026-05-19 10:33 | Re-verified lint/build after pastel palette update | Build + lint outputs | `9035664` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 10:34 | Synced context metadata after pastel-palette push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
