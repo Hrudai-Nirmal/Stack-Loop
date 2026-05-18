@@ -84,8 +84,9 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 12:06 | Removed Step 1/2/3 process section above contact | `src/components/narrative/scroll-narrative.tsx` | `ea40da1` | `main` | yes | Deleted `#about` process boxes and cleaned unused import |
 | 2026-05-19 12:07 | Re-verified lint/build after removing process boxes | Build + lint outputs | `ea40da1` | `main` | yes | `pnpm lint` and `pnpm build` passed |
 | 2026-05-19 12:08 | Synced context metadata after process-box removal push | `context.md` | `ce98e81` | `main` | yes | Updated latest commit SHA references |
-| 2026-05-19 12:15 | Reworked narrative reverse-scroll behavior to eliminate premature first-line resurfacing | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Removed extra trigger callbacks and switched per-step entrance to explicit `fromTo` with `immediateRender: false` |
-| 2026-05-19 12:16 | Re-verified lint/build after reverse-scroll behavior hardening | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 12:15 | Reworked narrative reverse-scroll behavior to eliminate premature first-line resurfacing | `src/components/narrative/scroll-narrative.tsx` | `95a2072` | `main` | yes | Removed extra trigger callbacks and switched per-step entrance to explicit `fromTo` with `immediateRender: false` |
+| 2026-05-19 12:16 | Re-verified lint/build after reverse-scroll behavior hardening | Build + lint outputs | `95a2072` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 12:18 | Synced context metadata after reverse-scroll hardening push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
