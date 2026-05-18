@@ -73,10 +73,11 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 11:35 | Synced context metadata after first-card accordion push | `context.md` | `b4ba62c` | `main` | yes | Updated latest commit SHA references |
 | 2026-05-19 11:41 | Fixed reverse-scroll intro bug where first narrative line reappeared too early | `src/components/narrative/scroll-narrative.tsx` | `febf0ce` | `main` | yes | Removed premature `onEnterBack` state reset; first line now restores only at top boundary |
 | 2026-05-19 11:42 | Re-verified lint/build after reverse-scroll intro fix | Build + lint outputs | `febf0ce` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-19 11:43 | Synced context metadata after reverse-scroll bugfix push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
-| 2026-05-19 11:49 | Added neo-brutalist shadows to walkthrough accordion boxes and updated header tone | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Header background changed to `#B6AE9F`; accordion cards now use `brutal-shadow` |
-| 2026-05-19 11:50 | Hardened first-view responsiveness for header/navigation and accordion readability | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Header/nav now wraps safely on small screens; accordion body text scales with breakpoints |
-| 2026-05-19 11:51 | Re-verified lint/build after accordion shadow + responsive update | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 11:43 | Synced context metadata after reverse-scroll bugfix push | `context.md` | `0b6ee66` | `main` | yes | Updated latest commit SHA references |
+| 2026-05-19 11:49 | Added neo-brutalist shadows to walkthrough accordion boxes and updated header tone | `src/components/narrative/scroll-narrative.tsx` | `1f99b47` | `main` | yes | Header background changed to `#B6AE9F`; accordion cards now use `brutal-shadow` |
+| 2026-05-19 11:50 | Hardened first-view responsiveness for header/navigation and accordion readability | `src/components/narrative/scroll-narrative.tsx` | `1f99b47` | `main` | yes | Header/nav now wraps safely on small screens; accordion body text scales with breakpoints |
+| 2026-05-19 11:51 | Re-verified lint/build after accordion shadow + responsive update | Build + lint outputs | `1f99b47` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 11:52 | Synced context metadata after accordion-shadow and header-tone push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
