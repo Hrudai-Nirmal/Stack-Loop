@@ -89,9 +89,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 12:18 | Synced context metadata after reverse-scroll hardening push | `context.md` | `a0d5ea3` | `main` | yes | Updated latest commit SHA references |
 | 2026-05-19 12:24 | Implemented UI batch: toast popup, glass header, narrative shadows, section badge recolors, header boxed items, and avatar icon | `src/components/narrative/*` | `3c27319` | `main` | yes | Added submission toast in contact form and completed requested style treatments |
 | 2026-05-19 12:25 | Re-verified lint/build after full UI batch | Build + lint outputs | `3c27319` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-19 12:26 | Synced context metadata after full UI batch push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
-| 2026-05-19 12:31 | Corrected manual-ops badge color and adjusted narrative text shadow styling | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Set manual-ops badge to `#D76C82`, changed heading shadow to `#D76C82`, removed subheading shadows |
-| 2026-05-19 12:32 | Re-verified lint/build after badge and narrative-shadow adjustments | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 12:26 | Synced context metadata after full UI batch push | `context.md` | `e3cc64c` | `main` | yes | Updated latest commit SHA references |
+| 2026-05-19 12:31 | Corrected manual-ops badge color and adjusted narrative text shadow styling | `src/components/narrative/scroll-narrative.tsx` | `7d9d187` | `main` | yes | Set manual-ops badge to `#D76C82`, changed heading shadow to `#D76C82`, removed subheading shadows |
+| 2026-05-19 12:32 | Re-verified lint/build after badge and narrative-shadow adjustments | Build + lint outputs | `7d9d187` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 12:33 | Synced context metadata after badge/shadow fix push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
