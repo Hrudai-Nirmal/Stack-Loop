@@ -36,9 +36,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-18 21:20 | Synced context metadata after narration feature push | `context.md` | `781f579` | `main` | yes | Updated action log with latest commit SHA |
 | 2026-05-18 21:27 | Stabilized narration completion logic and slowed intro pacing | `src/components/narrative/scroll-narrative.tsx` | `12954d8` | `main` | yes | Moved header reveal to one-time `onLeave`, expanded narration size, and increased scroll duration |
 | 2026-05-18 21:28 | Re-verified lint/build after narration stability update | Build + lint outputs | `12954d8` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-18 21:29 | Synced context metadata after narration stability push | `context.md` | pending | `main` | no | Updated action log commit references |
-| 2026-05-19 10:02 | Removed delayed header mechanism and made header persist from first render | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Simplified by deleting header state/trigger logic and adding top padding offset |
-| 2026-05-19 10:03 | Re-verified lint/build after static header change | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-18 21:29 | Synced context metadata after narration stability push | `context.md` | `8964b1f` | `main` | yes | Updated action log commit references |
+| 2026-05-19 10:02 | Removed delayed header mechanism and made header persist from first render | `src/components/narrative/scroll-narrative.tsx` | `7dc274d` | `main` | yes | Simplified by deleting header state/trigger logic and adding top padding offset |
+| 2026-05-19 10:03 | Re-verified lint/build after static header change | Build + lint outputs | `7dc274d` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 10:04 | Synced context metadata after static-header push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
