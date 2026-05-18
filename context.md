@@ -105,6 +105,8 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 13:02 | Updated narrative heading shadows to `#EABE6C` with word-level `#B03052` overrides | `src/components/narrative/scroll-narrative.tsx` | `9ad978e` | `main` | yes | Applied special shadow color words: NOT, repetition, tools, logic, Stack, Loop |
 | 2026-05-19 13:03 | Re-verified lint/build after per-word shadow styling update | Build + lint outputs | `9ad978e` | `main` | yes | `pnpm lint` and `pnpm build` passed |
 | 2026-05-19 13:04 | Synced context metadata after per-word shadow update push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
+| 2026-05-19 13:08 | Fixed missing whitespace between “repetition” and “isn’t” in second narrative heading | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Added explicit JSX space separator after highlighted word |
+| 2026-05-19 13:09 | Re-verified lint/build after narrative spacing fix | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.

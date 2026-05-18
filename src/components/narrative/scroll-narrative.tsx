@@ -43,7 +43,8 @@ const narrationLevels = [
   {
     heading: (
       <>
-        Manual <span className="[text-shadow:3px_3px_0_#B03052]">repetition</span> isn&apos;t work.
+        Manual <span className="[text-shadow:3px_3px_0_#B03052]">repetition</span>{" "}
+        isn&apos;t work.
       </>
     ),
     subheading: "it's a logic failure and pure overhead.",
