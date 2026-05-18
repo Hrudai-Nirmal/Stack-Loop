@@ -33,18 +33,36 @@ const valueCards = [
 
 const narrationLevels = [
   {
-    heading: "You are NOT behind",
+    heading: (
+      <>
+        You are <span className="[text-shadow:3px_3px_0_#B03052]">NOT</span> behind
+      </>
+    ),
     subheading: "-you are just performing a script's labor.",
   },
   {
-    heading: "Manual repetition isn't work.",
+    heading: (
+      <>
+        Manual <span className="[text-shadow:3px_3px_0_#B03052]">repetition</span> isn&apos;t work.
+      </>
+    ),
     subheading: "it's a logic failure and pure overhead.",
   },
   {
-    heading: "Stack the tools. Loop the logic.",
+    heading: (
+      <>
+        Stack the <span className="[text-shadow:3px_3px_0_#B03052]">tools</span>. Loop the{" "}
+        <span className="[text-shadow:3px_3px_0_#B03052]">logic</span>.
+      </>
+    ),
   },
   {
-    heading: "Stack and Loop.",
+    heading: (
+      <>
+        <span className="[text-shadow:3px_3px_0_#B03052]">Stack</span> and{" "}
+        <span className="[text-shadow:3px_3px_0_#B03052]">Loop</span>.
+      </>
+    ),
   },
 ];
 
@@ -146,13 +164,13 @@ export function ScrollNarrative() {
         <div className="relative h-72 w-full max-w-5xl">
           {narrationLevels.map((level, index) => (
             <div
-              key={level.heading}
+              key={`narrative-${index}`}
               ref={(el) => {
                 lineRefs.current[index] = el;
               }}
               className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-3 text-center"
             >
-              <p className="font-[family-name:var(--font-display)] text-5xl leading-tight [text-shadow:3px_3px_0_#5A1A16] md:text-8xl">
+              <p className="font-[family-name:var(--font-display)] text-5xl leading-tight [text-shadow:3px_3px_0_#EABE6C] md:text-8xl">
                 {level.heading}
               </p>
               {level.subheading ? (
