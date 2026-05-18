@@ -71,6 +71,8 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 11:33 | Replaced first-card weekly-waste list with walkthrough accordion and adjusted first-card typography | `src/components/narrative/scroll-narrative.tsx` | `b49e03c` | `main` | yes | Left side heading/body increased slightly; right box heading unchanged with larger body/chips |
 | 2026-05-19 11:34 | Re-verified lint/build after first-card accordion pass | Build + lint outputs | `b49e03c` | `main` | yes | `pnpm lint` and `pnpm build` passed |
 | 2026-05-19 11:35 | Synced context metadata after first-card accordion push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
+| 2026-05-19 11:41 | Fixed reverse-scroll intro bug where first narrative line reappeared too early | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Removed premature `onEnterBack` state reset; first line now restores only at top boundary |
+| 2026-05-19 11:42 | Re-verified lint/build after reverse-scroll intro fix | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.

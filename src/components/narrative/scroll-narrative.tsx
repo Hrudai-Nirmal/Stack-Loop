@@ -82,12 +82,6 @@ export function ScrollNarrative() {
             onLeave: () => {
               gsap.set(lines, { opacity: 0, y: -24 });
             },
-            onEnterBack: () => {
-              gsap.set(lines, { opacity: 0, y: 24 });
-              if (lines[0]) {
-                gsap.set(lines[0], { opacity: 1, y: 0 });
-              }
-            },
           },
         });
 
