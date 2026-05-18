@@ -101,9 +101,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 12:48 | Synced context metadata after requested color update push | `context.md` | `e682dc9` | `main` | yes | Updated latest commit SHA references |
 | 2026-05-19 12:53 | Adjusted narrative main-heading text shadow to lighter shade of `#3D0301` | `src/components/narrative/scroll-narrative.tsx` | `70de4d9` | `main` | yes | Set shadow color to `#5A1A16` |
 | 2026-05-19 12:54 | Re-verified lint/build after narrative shadow shade adjustment | Build + lint outputs | `70de4d9` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-19 12:55 | Synced context metadata after lighter-shadow update push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
-| 2026-05-19 13:02 | Updated narrative heading shadows to `#EABE6C` with word-level `#B03052` overrides | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Applied special shadow color words: NOT, repetition, tools, logic, Stack, Loop |
-| 2026-05-19 13:03 | Re-verified lint/build after per-word shadow styling update | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 12:55 | Synced context metadata after lighter-shadow update push | `context.md` | `0a88b17` | `main` | yes | Updated latest commit SHA references |
+| 2026-05-19 13:02 | Updated narrative heading shadows to `#EABE6C` with word-level `#B03052` overrides | `src/components/narrative/scroll-narrative.tsx` | `9ad978e` | `main` | yes | Applied special shadow color words: NOT, repetition, tools, logic, Stack, Loop |
+| 2026-05-19 13:03 | Re-verified lint/build after per-word shadow styling update | Build + lint outputs | `9ad978e` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 13:04 | Synced context metadata after per-word shadow update push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
