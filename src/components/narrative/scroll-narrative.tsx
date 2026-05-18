@@ -31,14 +31,21 @@ const valueCards = [
   },
 ];
 
-const narrationLines = [
-  "You are not behind.",
-  "You are just doing the work of a script.",
-  "Every manual click is a failure of logic.",
-  "Every copy-paste is a wasted hour.",
-  "This isn't work. It is overhead.",
-  "Stack the tools. Loop the logic.",
-  "Stack and Loop.",
+const narrationLevels = [
+  {
+    heading: "You aren\u2019t behind",
+    subheading: "\u2014you\u2019re just performing a script\u2019s labor.",
+  },
+  {
+    heading: "Manual repetition isn't work.",
+    subheading: "it\u2019s a logic failure and pure overhead.",
+  },
+  {
+    heading: "Stack the tools. Loop the logic.",
+  },
+  {
+    heading: "Stack and Loop.",
+  },
 ];
 
 export function ScrollNarrative() {
@@ -58,34 +65,40 @@ export function ScrollNarrative() {
 
     const context = gsap.context(() => {
       if (narrationRef.current) {
-        const lines = lineRefs.current.filter(Boolean) as HTMLParagraphElement[];
+        const lines = lineRefs.current.filter(Boolean) as HTMLDivElement[];
         gsap.set(lines, { opacity: 0, y: 24 });
+        if (lines[0]) {
+          gsap.set(lines[0], { opacity: 1, y: 0 });
+        }
 
         const introTimeline = gsap.timeline({
           defaults: { ease: "power2.out" },
           scrollTrigger: {
             trigger: narrationRef.current,
             start: "top top",
-            end: `+=${narrationLines.length * 760}`,
+            end: `+=${narrationLevels.length * 1000}`,
             scrub: 1,
             pin: true,
           },
         });
 
         lines.forEach((line, index) => {
-          const at = index * 1.15;
+          const at = index * 1.35;
           introTimeline
-            .to(line, { opacity: 1, y: 0, duration: 0.52 }, at)
-            .to(line, { opacity: 0, y: -24, duration: 0.52 }, at + 0.78);
+            .to(line, { opacity: 1, y: 0, duration: 0.6 }, at)
+            .to(line, { opacity: 0, y: -24, duration: 0.6 }, at + 0.92);
         });
 
         ScrollTrigger.create({
           trigger: narrationRef.current,
           start: "top top",
-          end: `+=${narrationLines.length * 760}`,
+          end: `+=${narrationLevels.length * 1000}`,
           onUpdate: (self) => {
             if (self.progress < 0.02) {
               gsap.set(lines, { opacity: 0, y: 24 });
+              if (lines[0]) {
+                gsap.set(lines[0], { opacity: 1, y: 0 });
+              }
             }
           },
         });
@@ -136,17 +149,24 @@ export function ScrollNarrative() {
         ref={narrationRef}
         className="relative -mx-4 flex min-h-screen items-center justify-center overflow-hidden px-4 md:-mx-8 md:px-8"
       >
-        <div className="relative h-56 w-full max-w-5xl">
-          {narrationLines.map((line, index) => (
-            <p
-              key={line}
+        <div className="relative h-72 w-full max-w-5xl">
+          {narrationLevels.map((level, index) => (
+            <div
+              key={level.heading}
               ref={(el) => {
-                lineRefs.current[index] = el;
+                lineRefs.current[index] = el as HTMLDivElement | null;
               }}
-              className="pointer-events-none absolute inset-0 flex items-center justify-center text-center font-[family-name:var(--font-display)] text-5xl leading-tight md:text-8xl"
+              className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-3 text-center"
             >
-              {line}
-            </p>
+              <p className="font-[family-name:var(--font-display)] text-5xl leading-tight md:text-8xl">
+                {level.heading}
+              </p>
+              {level.subheading ? (
+                <p className="max-w-4xl text-xl font-medium leading-tight text-muted-foreground md:text-3xl">
+                  {level.subheading}
+                </p>
+              ) : null}
+            </div>
           ))}
         </div>
       </section>
