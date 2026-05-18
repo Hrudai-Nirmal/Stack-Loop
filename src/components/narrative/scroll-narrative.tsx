@@ -249,7 +249,7 @@ export function ScrollNarrative() {
           </div>
         </div>
         <div className="order-2 w-full min-w-0 space-y-6 border-2 border-border bg-background p-5">
-          <Badge className="rounded-none border-2 border-border bg-secondary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-secondary-foreground">
+          <Badge className="max-w-full whitespace-normal rounded-none border-2 border-border bg-secondary px-3 py-1 text-[11px] leading-tight uppercase tracking-[0.14em] text-secondary-foreground sm:whitespace-nowrap">
             {heroCopy.eyebrow}
           </Badge>
           <h1 className="max-w-3xl font-[family-name:var(--font-display)] text-4xl leading-[1.03] md:text-5xl">
