@@ -110,9 +110,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 13:10 | Synced context metadata after narrative spacing hotfix push | `context.md` | `0da9661` | `main` | yes | Updated latest commit SHA references |
 | 2026-05-19 13:16 | Hardened first-card mobile responsiveness for accordion and right-side box widths | `src/components/narrative/scroll-narrative.tsx` | `927fcec` | `main` | yes | Enforced `grid-cols-1`, `w-full`, and `min-w-0`; preserved right box below accordion on phones |
 | 2026-05-19 13:17 | Re-verified lint/build after first-card mobile width fix | Build + lint outputs | `927fcec` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-19 13:18 | Synced context metadata after first-card mobile responsiveness push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
-| 2026-05-19 13:23 | Fixed first-card right-box badge wrapping for smaller screens | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Added `max-w-full` + mobile `whitespace-normal` with desktop `whitespace-nowrap` |
-| 2026-05-19 13:24 | Re-verified lint/build after right-box badge responsiveness fix | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 13:18 | Synced context metadata after first-card mobile responsiveness push | `context.md` | `b7f96b6` | `main` | yes | Updated latest commit SHA references |
+| 2026-05-19 13:23 | Fixed first-card right-box badge wrapping for smaller screens | `src/components/narrative/scroll-narrative.tsx` | `ab881da` | `main` | yes | Added `max-w-full` + mobile `whitespace-normal` with desktop `whitespace-nowrap` |
+| 2026-05-19 13:24 | Re-verified lint/build after right-box badge responsiveness fix | Build + lint outputs | `ab881da` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 13:25 | Synced context metadata after right-box badge responsive fix push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
