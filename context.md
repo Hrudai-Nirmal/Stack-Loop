@@ -77,9 +77,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 11:49 | Added neo-brutalist shadows to walkthrough accordion boxes and updated header tone | `src/components/narrative/scroll-narrative.tsx` | `1f99b47` | `main` | yes | Header background changed to `#B6AE9F`; accordion cards now use `brutal-shadow` |
 | 2026-05-19 11:50 | Hardened first-view responsiveness for header/navigation and accordion readability | `src/components/narrative/scroll-narrative.tsx` | `1f99b47` | `main` | yes | Header/nav now wraps safely on small screens; accordion body text scales with breakpoints |
 | 2026-05-19 11:51 | Re-verified lint/build after accordion shadow + responsive update | Build + lint outputs | `1f99b47` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-19 11:52 | Synced context metadata after accordion-shadow and header-tone push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
-| 2026-05-19 11:58 | Refactored intro animation to single timeline-controlled state for stable reverse scroll | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Removed manual leave/leaveBack state triggers and used explicit `fromTo` step control |
-| 2026-05-19 11:59 | Re-verified lint/build after reverse-scroll stabilization refactor | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 11:52 | Synced context metadata after accordion-shadow and header-tone push | `context.md` | `f4e0825` | `main` | yes | Updated latest commit SHA references |
+| 2026-05-19 11:58 | Refactored intro animation to single timeline-controlled state for stable reverse scroll | `src/components/narrative/scroll-narrative.tsx` | `a78a68f` | `main` | yes | Removed manual leave/leaveBack state triggers and used explicit `fromTo` step control |
+| 2026-05-19 11:59 | Re-verified lint/build after reverse-scroll stabilization refactor | Build + lint outputs | `a78a68f` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 12:00 | Synced context metadata after timeline-state refactor push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
