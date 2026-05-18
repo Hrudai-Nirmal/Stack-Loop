@@ -87,8 +87,9 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 12:15 | Reworked narrative reverse-scroll behavior to eliminate premature first-line resurfacing | `src/components/narrative/scroll-narrative.tsx` | `95a2072` | `main` | yes | Removed extra trigger callbacks and switched per-step entrance to explicit `fromTo` with `immediateRender: false` |
 | 2026-05-19 12:16 | Re-verified lint/build after reverse-scroll behavior hardening | Build + lint outputs | `95a2072` | `main` | yes | `pnpm lint` and `pnpm build` passed |
 | 2026-05-19 12:18 | Synced context metadata after reverse-scroll hardening push | `context.md` | `a0d5ea3` | `main` | yes | Updated latest commit SHA references |
-| 2026-05-19 12:24 | Implemented UI batch: toast popup, glass header, narrative shadows, section badge recolors, header boxed items, and avatar icon | `src/components/narrative/*` | pending | `main` | no | Added submission toast in contact form and completed requested style treatments |
-| 2026-05-19 12:25 | Re-verified lint/build after full UI batch | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 12:24 | Implemented UI batch: toast popup, glass header, narrative shadows, section badge recolors, header boxed items, and avatar icon | `src/components/narrative/*` | `3c27319` | `main` | yes | Added submission toast in contact form and completed requested style treatments |
+| 2026-05-19 12:25 | Re-verified lint/build after full UI batch | Build + lint outputs | `3c27319` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 12:26 | Synced context metadata after full UI batch push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
