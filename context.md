@@ -44,6 +44,8 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 10:15 | Applied new four-color palette to global design tokens | `src/app/globals.css` | `b55b70c` | `main` | yes | Palette: `#240A34`, `#891652`, `#EABE6C`, `#FFEDD8` |
 | 2026-05-19 10:16 | Re-verified lint/build after header and palette updates | Build + lint outputs | `b55b70c` | `main` | yes | `pnpm lint` and `pnpm build` passed |
 | 2026-05-19 10:17 | Synced context metadata after header/palette push | `context.md` | pending | `main` | no | Updated action log commit references |
+| 2026-05-19 10:24 | Applied requested dark rose/plum palette to global theme tokens | `src/app/globals.css` | pending | `main` | no | Palette: `#E23E57`, `#88304E`, `#522546`, `#311D3F` |
+| 2026-05-19 10:25 | Re-verified lint/build after palette refresh | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
