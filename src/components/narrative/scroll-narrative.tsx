@@ -79,29 +79,19 @@ export function ScrollNarrative() {
             end: `+=${narrationLevels.length * 1000}`,
             scrub: 1,
             pin: true,
-            onLeave: () => {
-              gsap.set(lines, { opacity: 0, y: -24 });
-            },
           },
         });
 
         lines.forEach((line, index) => {
           const at = index * 1.35;
+          introTimeline.fromTo(
+            line,
+            { opacity: index === 0 ? 1 : 0, y: index === 0 ? 0 : 24 },
+            { opacity: 1, y: 0, duration: 0.6, immediateRender: false },
+            at
+          );
           introTimeline
-            .to(line, { opacity: 1, y: 0, duration: 0.6 }, at)
             .to(line, { opacity: 0, y: -24, duration: 0.6 }, at + 0.92);
-        });
-
-        ScrollTrigger.create({
-          trigger: narrationRef.current,
-          start: "top top",
-          end: `+=${narrationLevels.length * 1000}`,
-          onLeaveBack: () => {
-            gsap.set(lines, { opacity: 0, y: 24 });
-            if (lines[0]) {
-              gsap.set(lines[0], { opacity: 1, y: 0 });
-            }
-          },
         });
       }
 
