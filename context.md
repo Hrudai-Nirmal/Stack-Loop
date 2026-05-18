@@ -28,6 +28,8 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-18 21:03 | Restyled landing page toward Gumroad-like layout and switched to plain solid background | `src/app/globals.css`, `src/components/narrative/*` | `a3ea188` | `main` | yes | Added cleaner header/hero rhythm, simplified borders, removed textured backdrop |
 | 2026-05-18 21:04 | Re-verified lint and production build after UI restyle | Build + lint outputs | `a3ea188` | `main` | yes | `pnpm lint` and `pnpm build` passed |
 | 2026-05-18 21:06 | Synced context metadata after Gumroad-style restyle push | `context.md` | pending | `main` | no | Updated action log commit references |
+| 2026-05-18 21:10 | Applied requested four-color palette to global theme tokens | `src/app/globals.css` | pending | `main` | no | Palette: `#EBE8DB`, `#D76C82`, `#B03052`, `#3D0301` |
+| 2026-05-18 21:11 | Re-verified lint/build after palette update | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
