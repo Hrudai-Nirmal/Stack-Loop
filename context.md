@@ -19,11 +19,12 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-18 20:39 | Committed and pushed bootstrap baseline | Git history + remote | `1ce1137` | `main` | yes | Root commit pushed to GitHub |
 | 2026-05-18 20:41 | Initialized shadcn setup and generated base UI components | `components.json`, `src/components/ui/*` | `219db0c` | `main` | yes | Repaired pnpm virtual-store mismatch and installed missing dependencies manually |
 | 2026-05-18 20:43 | Established design-system foundation and utility layer | `src/app/globals.css`, `src/app/layout.tsx`, `src/lib/utils.ts`, `package.json` | `219db0c` | `main` | yes | Added Neo Brutalist theme tokens, custom fonts, and class merge utility |
-| 2026-05-18 20:46 | Implemented narrative sections and GSAP scroll animation architecture | `src/components/narrative/*`, `src/lib/site-content.ts`, `src/app/page.tsx` | pending | `main` | no | Added reusable section shell, story content, and progressive motion fallback |
-| 2026-05-18 20:47 | Implemented Resend contact pipeline with validation and anti-spam safeguards | `src/app/api/contact/route.ts`, `.env.example`, `src/components/narrative/contact-form.tsx` | pending | `main` | no | Added zod validation, honeypot, and simple IP rate limiting |
-| 2026-05-18 20:48 | Verified quality checks and fixed build regression | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Replaced unsupported `asChild` usage with styled anchor CTA |
+| 2026-05-18 20:46 | Implemented narrative sections and GSAP scroll animation architecture | `src/components/narrative/*`, `src/lib/site-content.ts`, `src/app/page.tsx` | `0f2904f` | `main` | yes | Added reusable section shell, story content, and progressive motion fallback |
+| 2026-05-18 20:47 | Implemented Resend contact pipeline with validation and anti-spam safeguards | `src/app/api/contact/route.ts`, `.env.example`, `src/components/narrative/contact-form.tsx` | `0f2904f` | `main` | yes | Added zod validation, honeypot, and simple IP rate limiting |
+| 2026-05-18 20:48 | Verified quality checks and fixed build regression | `src/components/narrative/scroll-narrative.tsx` | `0f2904f` | `main` | yes | Replaced unsupported `asChild` usage with styled anchor CTA |
+| 2026-05-18 20:50 | Added deployment/config docs and env example tracking support | `.gitignore`, `README.md`, `.env.example` | pending | `main` | no | Enabled commit of `.env.example` and documented Vercel + Resend setup |
+| 2026-05-18 20:51 | Re-ran full verification suite before final ship | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` both passed |
 
 ## Current Next Steps
-1. Commit and push the narrative + contact implementation slice.
-2. Add README deployment/config notes for Vercel + Resend setup.
-3. Final verification and handoff summary.
+1. Commit and push docs + env template tracking updates.
+2. Deliver handoff summary.
