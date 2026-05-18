@@ -40,9 +40,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 10:02 | Removed delayed header mechanism and made header persist from first render | `src/components/narrative/scroll-narrative.tsx` | `7dc274d` | `main` | yes | Simplified by deleting header state/trigger logic and adding top padding offset |
 | 2026-05-19 10:03 | Re-verified lint/build after static header change | Build + lint outputs | `7dc274d` | `main` | yes | `pnpm lint` and `pnpm build` passed |
 | 2026-05-19 10:04 | Synced context metadata after static-header push | `context.md` | `0292b66` | `main` | yes | Updated latest commit SHA references |
-| 2026-05-19 10:14 | Increased header typography, updated nav items, and remapped section anchors | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Header logo/nav text enlarged ~20%; nav now: Work, Services, About, Contact |
-| 2026-05-19 10:15 | Applied new four-color palette to global design tokens | `src/app/globals.css` | pending | `main` | no | Palette: `#240A34`, `#891652`, `#EABE6C`, `#FFEDD8` |
-| 2026-05-19 10:16 | Re-verified lint/build after header and palette updates | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 10:14 | Increased header typography, updated nav items, and remapped section anchors | `src/components/narrative/scroll-narrative.tsx` | `b55b70c` | `main` | yes | Header logo/nav text enlarged ~20%; nav now: Work, Services, About, Contact |
+| 2026-05-19 10:15 | Applied new four-color palette to global design tokens | `src/app/globals.css` | `b55b70c` | `main` | yes | Palette: `#240A34`, `#891652`, `#EABE6C`, `#FFEDD8` |
+| 2026-05-19 10:16 | Re-verified lint/build after header and palette updates | Build + lint outputs | `b55b70c` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 10:17 | Synced context metadata after header/palette push | `context.md` | pending | `main` | no | Updated action log commit references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
