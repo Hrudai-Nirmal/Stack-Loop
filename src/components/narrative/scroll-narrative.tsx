@@ -152,7 +152,7 @@ export function ScrollNarrative() {
               }}
               className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-3 text-center"
             >
-              <p className="font-[family-name:var(--font-display)] text-5xl leading-tight [text-shadow:3px_3px_0_#D76C82] md:text-8xl">
+              <p className="font-[family-name:var(--font-display)] text-5xl leading-tight [text-shadow:3px_3px_0_#B03052] md:text-8xl">
                 {level.heading}
               </p>
               {level.subheading ? (
@@ -258,7 +258,7 @@ export function ScrollNarrative() {
             className="rounded-none border-2"
             badgeClassName={
               section.id === "pain"
-                ? "!bg-[#FF0000] !text-[#3D0301]"
+                ? "!bg-[#E14434] !text-[#3D0301]"
                 : section.id === "relief"
                   ? "!bg-[#7FBF7F] !text-[#123015]"
                   : ""
