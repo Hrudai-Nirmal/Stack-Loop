@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { ArrowRight, Bot, ChartNoAxesCombined, Workflow } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -45,11 +45,6 @@ export function ScrollNarrative() {
   const pageRef = useRef<HTMLDivElement | null>(null);
   const narrationRef = useRef<HTMLDivElement | null>(null);
   const lineRefs = useRef<(HTMLParagraphElement | null)[]>([]);
-  const hasShownHeader = useRef(false);
-  const [headerVisible, setHeaderVisible] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  });
   const socialUrl = useMemo(
     () => process.env.NEXT_PUBLIC_SOCIAL_CTA_URL || "https://www.linkedin.com",
     []
@@ -74,12 +69,6 @@ export function ScrollNarrative() {
             end: `+=${narrationLines.length * 760}`,
             scrub: 1,
             pin: true,
-            onLeave: () => {
-              if (!hasShownHeader.current) {
-                hasShownHeader.current = true;
-                setHeaderVisible(true);
-              }
-            },
           },
         });
 
@@ -120,24 +109,22 @@ export function ScrollNarrative() {
   }, []);
 
   return (
-    <div ref={pageRef} className="mx-auto w-full max-w-7xl px-4 pb-8 md:px-8 md:pb-10">
-      {headerVisible ? (
-        <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-card">
-          <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 md:px-8">
-            <div className="font-[family-name:var(--font-display)] text-xl tracking-tight">
-              Stack&Loop
-            </div>
-            <div className="flex items-center gap-6 text-sm font-medium">
-              <a href="#how" className="hover:underline">
-                What we do
-              </a>
-              <a href="#contact" className="hover:underline">
-                Contact
-              </a>
-            </div>
+    <div ref={pageRef} className="mx-auto w-full max-w-7xl px-4 pb-8 pt-16 md:px-8 md:pb-10 md:pt-20">
+      <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-card">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 md:px-8">
+          <div className="font-[family-name:var(--font-display)] text-xl tracking-tight">
+            Stack&Loop
           </div>
-        </header>
-      ) : null}
+          <div className="flex items-center gap-6 text-sm font-medium">
+            <a href="#how" className="hover:underline">
+              What we do
+            </a>
+            <a href="#contact" className="hover:underline">
+              Contact
+            </a>
+          </div>
+        </div>
+      </header>
 
       <section
         ref={narrationRef}
