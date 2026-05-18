@@ -124,12 +124,12 @@ export function ScrollNarrative() {
 
   return (
     <div ref={pageRef} className="mx-auto w-full max-w-7xl px-4 pb-8 md:px-8 md:pb-10">
-      <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-[#dbd8d2]">
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 md:px-8">
-          <div className="font-[family-name:var(--font-display)] text-2xl tracking-tight">
+      <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-[#B6AE9F]">
+        <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 md:flex-nowrap md:px-8">
+          <div className="font-[family-name:var(--font-display)] text-xl tracking-tight sm:text-2xl">
             Stack&Loop
           </div>
-          <div className="flex items-center gap-6 text-[0.95rem] font-medium">
+          <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm font-medium sm:text-[0.95rem]">
             <a href="#work" className="hover:underline">
               Work
             </a>
@@ -188,48 +188,48 @@ export function ScrollNarrative() {
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-muted-foreground">
             Walkthrough
           </p>
-          <div className="space-y-2">
-            <details className="group border border-border bg-card px-3 py-2">
+          <div className="space-y-3">
+            <details className="group border border-border bg-card px-3 py-2 brutal-shadow">
               <summary className="cursor-pointer list-none text-base font-semibold">
                 01. Workflow Audit
               </summary>
-              <p className="pt-2 text-sm leading-6 text-muted-foreground">
+              <p className="pt-2 text-sm leading-6 text-muted-foreground sm:text-base">
                 We map current tools, handoffs, and repeated operator actions to reveal exactly where
                 time is being consumed.
               </p>
             </details>
-            <details className="group border border-border bg-card px-3 py-2">
+            <details className="group border border-border bg-card px-3 py-2 brutal-shadow">
               <summary className="cursor-pointer list-none text-base font-semibold">
                 02. Automation Blueprint
               </summary>
-              <p className="pt-2 text-sm leading-6 text-muted-foreground">
+              <p className="pt-2 text-sm leading-6 text-muted-foreground sm:text-base">
                 We define triggers, decision paths, fallback behavior, and alert points before writing
                 any automation logic.
               </p>
             </details>
-            <details className="group border border-border bg-card px-3 py-2">
+            <details className="group border border-border bg-card px-3 py-2 brutal-shadow">
               <summary className="cursor-pointer list-none text-base font-semibold">
                 03. Build Sprint
               </summary>
-              <p className="pt-2 text-sm leading-6 text-muted-foreground">
+              <p className="pt-2 text-sm leading-6 text-muted-foreground sm:text-base">
                 We implement the highest-impact flows first and validate every stage with real operating
                 conditions.
               </p>
             </details>
-            <details className="group border border-border bg-card px-3 py-2">
+            <details className="group border border-border bg-card px-3 py-2 brutal-shadow">
               <summary className="cursor-pointer list-none text-base font-semibold">
                 04. Supervised Rollout
               </summary>
-              <p className="pt-2 text-sm leading-6 text-muted-foreground">
+              <p className="pt-2 text-sm leading-6 text-muted-foreground sm:text-base">
                 New automations launch with guardrails, manual overrides, and monitoring so your team
                 trusts the system from day one.
               </p>
             </details>
-            <details className="group border border-border bg-card px-3 py-2">
+            <details className="group border border-border bg-card px-3 py-2 brutal-shadow">
               <summary className="cursor-pointer list-none text-base font-semibold">
                 05. Weekly Optimization
               </summary>
-              <p className="pt-2 text-sm leading-6 text-muted-foreground">
+              <p className="pt-2 text-sm leading-6 text-muted-foreground sm:text-base">
                 We refine based on actual throughput, exception volume, and business outcomes to keep
                 performance compounding.
               </p>
