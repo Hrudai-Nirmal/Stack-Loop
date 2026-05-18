@@ -152,7 +152,7 @@ export function ScrollNarrative() {
               }}
               className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-3 text-center"
             >
-              <p className="font-[family-name:var(--font-display)] text-5xl leading-tight [text-shadow:3px_3px_0_#B03052] md:text-8xl">
+              <p className="font-[family-name:var(--font-display)] text-5xl leading-tight [text-shadow:3px_3px_0_#5A1A16] md:text-8xl">
                 {level.heading}
               </p>
               {level.subheading ? (
