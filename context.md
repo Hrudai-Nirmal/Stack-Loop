@@ -33,7 +33,9 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-18 21:12 | Synced context metadata after palette push | `context.md` | `f5e765a` | `main` | yes | Updated commit references and push status |
 | 2026-05-18 21:18 | Implemented scroll-hooked intro narration and delayed sticky header reveal | `src/components/narrative/scroll-narrative.tsx` | `5fe6994` | `main` | yes | Header now appears only after narration completes and stays visible afterward |
 | 2026-05-18 21:19 | Re-verified lint/build after narration behavior update | Build + lint outputs | `5fe6994` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-18 21:20 | Synced context metadata after narration feature push | `context.md` | pending | `main` | no | Updated action log with latest commit SHA |
+| 2026-05-18 21:20 | Synced context metadata after narration feature push | `context.md` | `781f579` | `main` | yes | Updated action log with latest commit SHA |
+| 2026-05-18 21:27 | Stabilized narration completion logic and slowed intro pacing | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Moved header reveal to one-time `onLeave`, expanded narration size, and increased scroll duration |
+| 2026-05-18 21:28 | Re-verified lint/build after narration stability update | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.

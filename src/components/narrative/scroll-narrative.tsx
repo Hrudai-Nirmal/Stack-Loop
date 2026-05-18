@@ -64,28 +64,39 @@ export function ScrollNarrative() {
     const context = gsap.context(() => {
       if (narrationRef.current) {
         const lines = lineRefs.current.filter(Boolean) as HTMLParagraphElement[];
-        gsap.set(lines, { opacity: 0, y: 20 });
+        gsap.set(lines, { opacity: 0, y: 24 });
+
+        const introTimeline = gsap.timeline({
+          defaults: { ease: "power2.out" },
+          scrollTrigger: {
+            trigger: narrationRef.current,
+            start: "top top",
+            end: `+=${narrationLines.length * 760}`,
+            scrub: 1,
+            pin: true,
+            onLeave: () => {
+              if (!hasShownHeader.current) {
+                hasShownHeader.current = true;
+                setHeaderVisible(true);
+              }
+            },
+          },
+        });
+
+        lines.forEach((line, index) => {
+          const at = index * 1.15;
+          introTimeline
+            .to(line, { opacity: 1, y: 0, duration: 0.52 }, at)
+            .to(line, { opacity: 0, y: -24, duration: 0.52 }, at + 0.78);
+        });
 
         ScrollTrigger.create({
           trigger: narrationRef.current,
           start: "top top",
-          end: "+=1700",
-          scrub: true,
-          pin: true,
+          end: `+=${narrationLines.length * 760}`,
           onUpdate: (self) => {
-            const progress = self.progress;
-            const active = progress * (narrationLines.length - 1);
-
-            lines.forEach((line, index) => {
-              const distance = Math.abs(index - active);
-              const opacity = Math.max(0, 1 - distance * 2.2);
-              const y = 20 - Math.max(0, 1 - distance * 1.8) * 20;
-              gsap.set(line, { opacity, y });
-            });
-
-            if (progress >= 0.98 && !hasShownHeader.current) {
-              hasShownHeader.current = true;
-              setHeaderVisible(true);
+            if (self.progress < 0.02) {
+              gsap.set(lines, { opacity: 0, y: 24 });
             }
           },
         });
@@ -139,7 +150,7 @@ export function ScrollNarrative() {
               ref={(el) => {
                 lineRefs.current[index] = el;
               }}
-              className="pointer-events-none absolute inset-0 flex items-center justify-center text-center font-[family-name:var(--font-display)] text-4xl leading-tight md:text-7xl"
+              className="pointer-events-none absolute inset-0 flex items-center justify-center text-center font-[family-name:var(--font-display)] text-5xl leading-tight md:text-8xl"
             >
               {line}
             </p>
