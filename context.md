@@ -67,9 +67,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 11:18 | Synced context metadata after intro/card enhancement push | `context.md` | `887f46c` | `main` | yes | Updated action log commit references |
 | 2026-05-19 11:24 | Prevented first narrative line from reappearing after intro end and moved walkthrough content to left column | `src/components/narrative/scroll-narrative.tsx` | `e538d99` | `main` | yes | Added explicit ScrollTrigger leave/back state handlers and swapped first card column content |
 | 2026-05-19 11:25 | Re-verified lint/build after intro-end and layout-column fixes | Build + lint outputs | `e538d99` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-19 11:26 | Synced context metadata after intro-end and first-card column fix | `context.md` | pending | `main` | no | Updated action log with latest commit reference |
-| 2026-05-19 11:33 | Replaced first-card weekly-waste list with walkthrough accordion and adjusted first-card typography | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Left side heading/body increased slightly; right box heading unchanged with larger body/chips |
-| 2026-05-19 11:34 | Re-verified lint/build after first-card accordion pass | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 11:26 | Synced context metadata after intro-end and first-card column fix | `context.md` | `451c191` | `main` | yes | Updated action log with latest commit reference |
+| 2026-05-19 11:33 | Replaced first-card weekly-waste list with walkthrough accordion and adjusted first-card typography | `src/components/narrative/scroll-narrative.tsx` | `b49e03c` | `main` | yes | Left side heading/body increased slightly; right box heading unchanged with larger body/chips |
+| 2026-05-19 11:34 | Re-verified lint/build after first-card accordion pass | Build + lint outputs | `b49e03c` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 11:35 | Synced context metadata after first-card accordion push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
