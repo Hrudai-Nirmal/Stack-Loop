@@ -17,11 +17,13 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-18 20:37 | Bootstrapped Next.js app with pnpm (temp dir), moved into repo root | Project scaffold files | `1ce1137` | `main` | yes | Used temp dir due to naming restriction on `Stack_and_Loop` |
 | 2026-05-18 20:38 | Created initial context file with required structure | `context.md` | `1ce1137` | `main` | yes | Baseline project memory started |
 | 2026-05-18 20:39 | Committed and pushed bootstrap baseline | Git history + remote | `1ce1137` | `main` | yes | Root commit pushed to GitHub |
-| 2026-05-18 20:41 | Initialized shadcn setup and generated base UI components | `components.json`, `src/components/ui/*` | pending | `main` | no | Repaired pnpm virtual-store mismatch and installed missing dependencies manually |
-| 2026-05-18 20:43 | Established design-system foundation and utility layer | `src/app/globals.css`, `src/app/layout.tsx`, `src/lib/utils.ts`, `package.json` | pending | `main` | no | Added Neo Brutalist theme tokens, custom fonts, and class merge utility |
+| 2026-05-18 20:41 | Initialized shadcn setup and generated base UI components | `components.json`, `src/components/ui/*` | `219db0c` | `main` | yes | Repaired pnpm virtual-store mismatch and installed missing dependencies manually |
+| 2026-05-18 20:43 | Established design-system foundation and utility layer | `src/app/globals.css`, `src/app/layout.tsx`, `src/lib/utils.ts`, `package.json` | `219db0c` | `main` | yes | Added Neo Brutalist theme tokens, custom fonts, and class merge utility |
+| 2026-05-18 20:46 | Implemented narrative sections and GSAP scroll animation architecture | `src/components/narrative/*`, `src/lib/site-content.ts`, `src/app/page.tsx` | pending | `main` | no | Added reusable section shell, story content, and progressive motion fallback |
+| 2026-05-18 20:47 | Implemented Resend contact pipeline with validation and anti-spam safeguards | `src/app/api/contact/route.ts`, `.env.example`, `src/components/narrative/contact-form.tsx` | pending | `main` | no | Added zod validation, honeypot, and simple IP rate limiting |
+| 2026-05-18 20:48 | Verified quality checks and fixed build regression | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Replaced unsupported `asChild` usage with styled anchor CTA |
 
 ## Current Next Steps
-1. Build narrative page sections with reusable React primitives.
-2. Add robust GSAP scroll/text animation architecture with reduced-motion fallback.
-3. Add Resend-backed contact API + validation + spam guard + UI integration.
-4. Run quality checks and ship final deploy-ready pass.
+1. Commit and push the narrative + contact implementation slice.
+2. Add README deployment/config notes for Vercel + Resend setup.
+3. Final verification and handoff summary.
