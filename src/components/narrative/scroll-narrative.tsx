@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowRight, Bot, ChartNoAxesCombined, Workflow } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -31,8 +31,25 @@ const valueCards = [
   },
 ];
 
+const narrationLines = [
+  "You are not behind.",
+  "You are just doing the work of a script.",
+  "Every manual click is a failure of logic.",
+  "Every copy-paste is a wasted hour.",
+  "This isn't work. It is overhead.",
+  "Stack the tools. Loop the logic.",
+  "Stack and Loop.",
+];
+
 export function ScrollNarrative() {
   const pageRef = useRef<HTMLDivElement | null>(null);
+  const narrationRef = useRef<HTMLDivElement | null>(null);
+  const lineRefs = useRef<(HTMLParagraphElement | null)[]>([]);
+  const hasShownHeader = useRef(false);
+  const [headerVisible, setHeaderVisible] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  });
   const socialUrl = useMemo(
     () => process.env.NEXT_PUBLIC_SOCIAL_CTA_URL || "https://www.linkedin.com",
     []
@@ -45,6 +62,35 @@ export function ScrollNarrative() {
     if (reducedMotion) return;
 
     const context = gsap.context(() => {
+      if (narrationRef.current) {
+        const lines = lineRefs.current.filter(Boolean) as HTMLParagraphElement[];
+        gsap.set(lines, { opacity: 0, y: 20 });
+
+        ScrollTrigger.create({
+          trigger: narrationRef.current,
+          start: "top top",
+          end: "+=1700",
+          scrub: true,
+          pin: true,
+          onUpdate: (self) => {
+            const progress = self.progress;
+            const active = progress * (narrationLines.length - 1);
+
+            lines.forEach((line, index) => {
+              const distance = Math.abs(index - active);
+              const opacity = Math.max(0, 1 - distance * 2.2);
+              const y = 20 - Math.max(0, 1 - distance * 1.8) * 20;
+              gsap.set(line, { opacity, y });
+            });
+
+            if (progress >= 0.98 && !hasShownHeader.current) {
+              hasShownHeader.current = true;
+              setHeaderVisible(true);
+            }
+          },
+        });
+      }
+
       gsap.utils.toArray<HTMLElement>("[data-animate='section']").forEach((el) => {
         gsap.from(el, {
           y: 30,
@@ -63,25 +109,43 @@ export function ScrollNarrative() {
   }, []);
 
   return (
-    <div ref={pageRef} className="mx-auto w-full max-w-7xl px-4 py-6 md:px-8 md:py-8">
-      <header className="mb-8 flex items-center justify-between border-2 border-border bg-card px-4 py-3 brutal-shadow">
-        <div className="font-[family-name:var(--font-display)] text-xl tracking-tight">Stack and Loop</div>
-        <div className="hidden items-center gap-5 text-sm font-medium md:flex">
-          <a href="#how" className="hover:underline">How it works</a>
-          <a href="#contact" className="hover:underline">Contact</a>
+    <div ref={pageRef} className="mx-auto w-full max-w-7xl px-4 pb-8 md:px-8 md:pb-10">
+      {headerVisible ? (
+        <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-card">
+          <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 md:px-8">
+            <div className="font-[family-name:var(--font-display)] text-xl tracking-tight">
+              Stack&Loop
+            </div>
+            <div className="flex items-center gap-6 text-sm font-medium">
+              <a href="#how" className="hover:underline">
+                What we do
+              </a>
+              <a href="#contact" className="hover:underline">
+                Contact
+              </a>
+            </div>
+          </div>
+        </header>
+      ) : null}
+
+      <section
+        ref={narrationRef}
+        className="relative -mx-4 flex min-h-screen items-center justify-center overflow-hidden px-4 md:-mx-8 md:px-8"
+      >
+        <div className="relative h-56 w-full max-w-5xl">
+          {narrationLines.map((line, index) => (
+            <p
+              key={line}
+              ref={(el) => {
+                lineRefs.current[index] = el;
+              }}
+              className="pointer-events-none absolute inset-0 flex items-center justify-center text-center font-[family-name:var(--font-display)] text-4xl leading-tight md:text-7xl"
+            >
+              {line}
+            </p>
+          ))}
         </div>
-        <a
-          href={socialUrl}
-          target="_blank"
-          rel="noreferrer"
-          className={cn(
-            buttonVariants({ variant: "outline", size: "sm" }),
-            "rounded-none border-2 border-border bg-background px-4 text-[11px] uppercase tracking-[0.1em]"
-          )}
-        >
-          DM
-        </a>
-      </header>
+      </section>
 
       <section
         data-animate="section"
@@ -167,4 +231,3 @@ export function ScrollNarrative() {
     </div>
   );
 }
-
