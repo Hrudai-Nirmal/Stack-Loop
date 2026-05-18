@@ -95,7 +95,7 @@ export async function POST(request: Request) {
     }
 
     return Response.json(
-      { message: "Message sent. I will reply with next steps soon." },
+      { message: "Thank you for reaching out! I will get back to you soon." },
       { status: 200 }
     );
   } catch {
@@ -105,4 +105,3 @@ export async function POST(request: Request) {
     );
   }
 }
-
