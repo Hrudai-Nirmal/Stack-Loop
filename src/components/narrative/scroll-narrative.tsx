@@ -132,7 +132,7 @@ export function ScrollNarrative() {
             <a href="#contact" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow hover:underline">
               Contact
             </a>
-            <div className="flex size-9 items-center justify-center rounded-full border-2 border-border bg-[#EABE6C] brutal-shadow">
+            <div className="flex size-10 items-center justify-center rounded-[999px] border-2 border-border bg-[#EABE6C] brutal-shadow">
               <CircleUserRound className="size-5" />
             </div>
           </div>
@@ -258,7 +258,7 @@ export function ScrollNarrative() {
             className="rounded-none border-2"
             badgeClassName={
               section.id === "pain"
-                ? "!bg-[#D76C82] !text-[#3D0301]"
+                ? "!bg-[#FF0000] !text-[#3D0301]"
                 : section.id === "relief"
                   ? "!bg-[#7FBF7F] !text-[#123015]"
                   : ""
