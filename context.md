@@ -30,9 +30,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-18 21:06 | Synced context metadata after Gumroad-style restyle push | `context.md` | `b6454bd` | `main` | yes | Updated action log commit references |
 | 2026-05-18 21:10 | Applied requested four-color palette to global theme tokens | `src/app/globals.css` | `4a97c2f` | `main` | yes | Palette: `#EBE8DB`, `#D76C82`, `#B03052`, `#3D0301` |
 | 2026-05-18 21:11 | Re-verified lint/build after palette update | Build + lint outputs | `4a97c2f` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-18 21:12 | Synced context metadata after palette push | `context.md` | pending | `main` | no | Updated commit references and push status |
-| 2026-05-18 21:18 | Implemented scroll-hooked intro narration and delayed sticky header reveal | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Header now appears only after narration completes and stays visible afterward |
-| 2026-05-18 21:19 | Re-verified lint/build after narration behavior update | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-18 21:12 | Synced context metadata after palette push | `context.md` | `f5e765a` | `main` | yes | Updated commit references and push status |
+| 2026-05-18 21:18 | Implemented scroll-hooked intro narration and delayed sticky header reveal | `src/components/narrative/scroll-narrative.tsx` | `5fe6994` | `main` | yes | Header now appears only after narration completes and stays visible afterward |
+| 2026-05-18 21:19 | Re-verified lint/build after narration behavior update | Build + lint outputs | `5fe6994` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-18 21:20 | Synced context metadata after narration feature push | `context.md` | pending | `main` | no | Updated action log with latest commit SHA |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
