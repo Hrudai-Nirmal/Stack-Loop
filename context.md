@@ -95,9 +95,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 12:33 | Synced context metadata after badge/shadow fix push | `context.md` | `d0d3953` | `main` | yes | Updated latest commit SHA references |
 | 2026-05-19 12:39 | Updated manual-ops badge to pure red and increased avatar icon radius/size | `src/components/narrative/scroll-narrative.tsx` | `2e98b31` | `main` | yes | Badge now uses `#FF0000`; avatar chip increased to `size-10` with max rounded radius |
 | 2026-05-19 12:40 | Re-verified lint/build after badge red + avatar radius update | Build + lint outputs | `2e98b31` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-19 12:41 | Synced context metadata after red-badge/avatar update | `context.md` | pending | `main` | no | Updated latest commit SHA references |
-| 2026-05-19 12:46 | Updated narrative main-heading shadow color and manual-ops badge color per request | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Main heading shadow -> `#B03052`; manual-ops badge -> `#E14434` |
-| 2026-05-19 12:47 | Re-verified lint/build after heading-shadow and badge-color update | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 12:41 | Synced context metadata after red-badge/avatar update | `context.md` | `e187d7d` | `main` | yes | Updated latest commit SHA references |
+| 2026-05-19 12:46 | Updated narrative main-heading shadow color and manual-ops badge color per request | `src/components/narrative/scroll-narrative.tsx` | `b293fde` | `main` | yes | Main heading shadow -> `#B03052`; manual-ops badge -> `#E14434` |
+| 2026-05-19 12:47 | Re-verified lint/build after heading-shadow and badge-color update | Build + lint outputs | `b293fde` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 12:48 | Synced context metadata after requested color update push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
