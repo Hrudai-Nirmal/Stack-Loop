@@ -79,6 +79,15 @@ export function ScrollNarrative() {
             end: `+=${narrationLevels.length * 1000}`,
             scrub: 1,
             pin: true,
+            onLeave: () => {
+              gsap.set(lines, { opacity: 0, y: -24 });
+            },
+            onEnterBack: () => {
+              gsap.set(lines, { opacity: 0, y: 24 });
+              if (lines[0]) {
+                gsap.set(lines[0], { opacity: 1, y: 0 });
+              }
+            },
           },
         });
 
@@ -93,12 +102,10 @@ export function ScrollNarrative() {
           trigger: narrationRef.current,
           start: "top top",
           end: `+=${narrationLevels.length * 1000}`,
-          onUpdate: (self) => {
-            if (self.progress < 0.02) {
-              gsap.set(lines, { opacity: 0, y: 24 });
-              if (lines[0]) {
-                gsap.set(lines[0], { opacity: 1, y: 0 });
-              }
+          onLeaveBack: () => {
+            gsap.set(lines, { opacity: 0, y: 24 });
+            if (lines[0]) {
+              gsap.set(lines[0], { opacity: 1, y: 0 });
             }
           },
         });
@@ -177,22 +184,6 @@ export function ScrollNarrative() {
         className="mb-12 grid gap-6 border-2 border-border bg-card p-6 brutal-shadow lg:grid-cols-[1.2fr_0.8fr] lg:p-10"
       >
         <div className="space-y-6">
-          <Badge className="rounded-none border-2 border-border bg-secondary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-secondary-foreground">
-            {heroCopy.eyebrow}
-          </Badge>
-          <h1 className="max-w-4xl font-[family-name:var(--font-display)] text-4xl leading-[1.03] md:text-6xl">
-            {heroCopy.headline}
-          </h1>
-          <p className="max-w-2xl text-lg leading-8 text-muted-foreground">{heroCopy.subtext}</p>
-          <div className="flex flex-wrap gap-2">
-            {heroCopy.chips.map((chip) => (
-              <Badge key={chip} variant="outline" className="rounded-none border-2 border-border bg-background px-3 py-1 text-[11px] uppercase tracking-[0.1em]">
-                {chip}
-              </Badge>
-            ))}
-          </div>
-        </div>
-        <div className="border-2 border-border bg-background p-5">
           <h3 className="mb-2 font-[family-name:var(--font-display)] text-2xl">
             Let&apos;s walk you through
           </h3>
@@ -217,6 +208,22 @@ export function ScrollNarrative() {
             Walkthrough: process audit, automation map, build sprint, supervised rollout, and weekly
             optimization until it runs cleanly.
           </p>
+        </div>
+        <div className="space-y-6 border-2 border-border bg-background p-5">
+          <Badge className="rounded-none border-2 border-border bg-secondary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-secondary-foreground">
+            {heroCopy.eyebrow}
+          </Badge>
+          <h1 className="max-w-3xl font-[family-name:var(--font-display)] text-4xl leading-[1.03] md:text-5xl">
+            {heroCopy.headline}
+          </h1>
+          <p className="max-w-2xl text-lg leading-8 text-muted-foreground">{heroCopy.subtext}</p>
+          <div className="flex flex-wrap gap-2">
+            {heroCopy.chips.map((chip) => (
+              <Badge key={chip} variant="outline" className="rounded-none border-2 border-border bg-card px-3 py-1 text-[11px] uppercase tracking-[0.1em]">
+                {chip}
+              </Badge>
+            ))}
+          </div>
         </div>
       </section>
 

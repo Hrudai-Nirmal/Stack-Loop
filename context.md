@@ -65,6 +65,8 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 11:16 | Updated intro copy/positioning, header color, and expanded first walkthrough card content | `src/components/narrative/scroll-narrative.tsx` | `6d3b681` | `main` | yes | First line now starts centered at load; header uses retro light gray; weekly waste box expanded with walkthrough narrative |
 | 2026-05-19 11:17 | Re-verified lint/build after intro and card enhancement pass | Build + lint outputs | `6d3b681` | `main` | yes | `pnpm lint` and `pnpm build` passed |
 | 2026-05-19 11:18 | Synced context metadata after intro/card enhancement push | `context.md` | pending | `main` | no | Updated action log commit references |
+| 2026-05-19 11:24 | Prevented first narrative line from reappearing after intro end and moved walkthrough content to left column | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Added explicit ScrollTrigger leave/back state handlers and swapped first card column content |
+| 2026-05-19 11:25 | Re-verified lint/build after intro-end and layout-column fixes | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
