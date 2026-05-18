@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef } from "react";
-import { ArrowRight, Bot, ChartNoAxesCombined, Workflow } from "lucide-react";
+import { ArrowRight, Bot, ChartNoAxesCombined, CircleUserRound, Workflow } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -114,24 +114,27 @@ export function ScrollNarrative() {
 
   return (
     <div ref={pageRef} className="mx-auto w-full max-w-7xl px-4 pb-8 md:px-8 md:pb-10">
-      <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-[#B6AE9F]">
+      <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-[#B6AE9FCC] backdrop-blur-md">
         <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 md:flex-nowrap md:px-8">
-          <div className="font-[family-name:var(--font-display)] text-xl tracking-tight sm:text-2xl">
+          <div className="border-2 border-border bg-[#EABE6C] px-3 py-1 font-[family-name:var(--font-display)] text-xl tracking-tight brutal-shadow sm:text-2xl">
             Stack&Loop
           </div>
           <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm font-medium sm:text-[0.95rem]">
-            <a href="#work" className="hover:underline">
+            <a href="#work" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow hover:underline">
               Work
             </a>
-            <a href="#services" className="hover:underline">
+            <a href="#services" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow hover:underline">
               Services
             </a>
-            <a href="#about" className="hover:underline">
+            <a href="#about" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow hover:underline">
               About
             </a>
-            <a href="#contact" className="hover:underline">
+            <a href="#contact" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow hover:underline">
               Contact
             </a>
+            <div className="flex size-9 items-center justify-center rounded-full border-2 border-border bg-[#EABE6C] brutal-shadow">
+              <CircleUserRound className="size-5" />
+            </div>
           </div>
         </div>
       </header>
@@ -149,11 +152,11 @@ export function ScrollNarrative() {
               }}
               className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-3 text-center"
             >
-              <p className="font-[family-name:var(--font-display)] text-5xl leading-tight md:text-8xl">
+              <p className="font-[family-name:var(--font-display)] text-5xl leading-tight [text-shadow:3px_3px_0_#EABE6C] md:text-8xl">
                 {level.heading}
               </p>
               {level.subheading ? (
-                <p className="max-w-4xl text-xl font-medium leading-tight text-muted-foreground md:text-3xl">
+                <p className="max-w-4xl text-xl font-medium leading-tight text-muted-foreground [text-shadow:2px_2px_0_#EABE6C] md:text-3xl">
                   {level.subheading}
                 </p>
               ) : null}
@@ -225,10 +228,6 @@ export function ScrollNarrative() {
               </p>
             </details>
           </div>
-          <p className="mt-4 text-base leading-7 text-muted-foreground">
-            Walkthrough: process audit, automation map, build sprint, supervised rollout, and weekly
-            optimization until it runs cleanly.
-          </p>
         </div>
         <div className="space-y-6 border-2 border-border bg-background p-5">
           <Badge className="rounded-none border-2 border-border bg-secondary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-secondary-foreground">
@@ -250,7 +249,21 @@ export function ScrollNarrative() {
 
       <div className="space-y-10">
         {problemSections.map((section) => (
-          <SectionShell key={section.id} id={section.id} eyebrow={section.eyebrow} title={section.title} content={section.content} className="rounded-none border-2" />
+          <SectionShell
+            key={section.id}
+            id={section.id}
+            eyebrow={section.eyebrow}
+            title={section.title}
+            content={section.content}
+            className="rounded-none border-2"
+            badgeClassName={
+              section.id === "pain"
+                ? "bg-[#FF9A00] text-[#3D0301]"
+                : section.id === "relief"
+                  ? "bg-[#7FBF7F] text-[#123015]"
+                  : ""
+            }
+          />
         ))}
       </div>
 

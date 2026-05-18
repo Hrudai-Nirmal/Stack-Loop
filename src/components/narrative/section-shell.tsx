@@ -7,6 +7,7 @@ type SectionShellProps = {
   title: string;
   content: string[];
   className?: string;
+  badgeClassName?: string;
   children?: React.ReactNode;
 };
 
@@ -16,6 +17,7 @@ export function SectionShell({
   title,
   content,
   className,
+  badgeClassName,
   children,
 }: SectionShellProps) {
   return (
@@ -29,7 +31,13 @@ export function SectionShell({
       )}
     >
       <div className="space-y-5">
-        <Badge variant="secondary" className="rounded-none border-2 border-border px-3 py-1 text-[11px] uppercase tracking-[0.14em]">
+        <Badge
+          variant="secondary"
+          className={cn(
+            "rounded-none border-2 border-border px-3 py-1 text-[11px] uppercase tracking-[0.14em]",
+            badgeClassName
+          )}
+        >
           {eyebrow}
         </Badge>
         <h2

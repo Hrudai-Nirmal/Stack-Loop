@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 type SubmitState = "idle" | "sending" | "success" | "error";
+type Toast = { message: string; tone: "success" | "error" } | null;
 
 const initialData = {
   name: "",
@@ -22,6 +23,7 @@ export function ContactForm() {
   const [formData, setFormData] = useState(initialData);
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [feedback, setFeedback] = useState("");
+  const [toast, setToast] = useState<Toast>(null);
 
   const canSubmit = useMemo(() => {
     return Boolean(formData.name && formData.email && formData.message);
@@ -50,7 +52,10 @@ export function ContactForm() {
 
       if (!response.ok) {
         setSubmitState("error");
-        setFeedback(payload.message ?? "Message failed to send.");
+        const message = payload.message ?? "Message failed to send.";
+        setFeedback(message);
+        setToast({ message, tone: "error" });
+        setTimeout(() => setToast(null), 2800);
         return;
       }
 
@@ -59,10 +64,20 @@ export function ContactForm() {
         payload.message ??
           "Thanks. I will get back to you shortly with next steps."
       );
+      setToast({
+        message:
+          payload.message ??
+          "Thanks. I will get back to you shortly with next steps.",
+        tone: "success",
+      });
+      setTimeout(() => setToast(null), 2800);
       setFormData(initialData);
     } catch {
       setSubmitState("error");
-      setFeedback("Network issue. Please retry in a minute.");
+      const message = "Network issue. Please retry in a minute.";
+      setFeedback(message);
+      setToast({ message, tone: "error" });
+      setTimeout(() => setToast(null), 2800);
     }
   }
 
@@ -198,6 +213,19 @@ export function ContactForm() {
           </div>
         </form>
       </CardContent>
+      {toast ? (
+        <div
+          className={`fixed bottom-5 right-5 z-[70] max-w-sm border-2 border-border px-4 py-3 text-sm font-semibold brutal-shadow ${
+            toast.tone === "success"
+              ? "bg-secondary text-secondary-foreground"
+              : "bg-primary text-primary-foreground"
+          }`}
+          role="status"
+          aria-live="polite"
+        >
+          {toast.message}
+        </div>
+      ) : null}
     </Card>
   );
 }
