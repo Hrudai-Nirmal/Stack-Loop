@@ -98,9 +98,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 12:41 | Synced context metadata after red-badge/avatar update | `context.md` | `e187d7d` | `main` | yes | Updated latest commit SHA references |
 | 2026-05-19 12:46 | Updated narrative main-heading shadow color and manual-ops badge color per request | `src/components/narrative/scroll-narrative.tsx` | `b293fde` | `main` | yes | Main heading shadow -> `#B03052`; manual-ops badge -> `#E14434` |
 | 2026-05-19 12:47 | Re-verified lint/build after heading-shadow and badge-color update | Build + lint outputs | `b293fde` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-19 12:48 | Synced context metadata after requested color update push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
-| 2026-05-19 12:53 | Adjusted narrative main-heading text shadow to lighter shade of `#3D0301` | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Set shadow color to `#5A1A16` |
-| 2026-05-19 12:54 | Re-verified lint/build after narrative shadow shade adjustment | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 12:48 | Synced context metadata after requested color update push | `context.md` | `e682dc9` | `main` | yes | Updated latest commit SHA references |
+| 2026-05-19 12:53 | Adjusted narrative main-heading text shadow to lighter shade of `#3D0301` | `src/components/narrative/scroll-narrative.tsx` | `70de4d9` | `main` | yes | Set shadow color to `#5A1A16` |
+| 2026-05-19 12:54 | Re-verified lint/build after narrative shadow shade adjustment | Build + lint outputs | `70de4d9` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 12:55 | Synced context metadata after lighter-shadow update push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
