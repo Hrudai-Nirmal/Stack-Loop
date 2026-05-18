@@ -10,7 +10,7 @@ import { SectionShell } from "@/components/narrative/section-shell";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { heroCopy, problemSections, processSections } from "@/lib/site-content";
+import { heroCopy, problemSections } from "@/lib/site-content";
 import { cn } from "@/lib/utils";
 
 const valueCards = [
@@ -274,12 +274,6 @@ export function ScrollNarrative() {
             </Card>
           ))}
         </div>
-      </section>
-
-      <section id="about" className="space-y-6">
-        {processSections.map((section) => (
-          <SectionShell key={section.id} id={section.id} eyebrow={section.eyebrow} title={section.title} content={section.content} className="rounded-none border-2" />
-        ))}
       </section>
 
       <section id="contact" data-animate="section" className="my-12 border-2 border-border bg-card p-6 brutal-shadow md:p-10">
