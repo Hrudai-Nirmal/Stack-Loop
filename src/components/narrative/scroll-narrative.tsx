@@ -33,12 +33,12 @@ const valueCards = [
 
 const narrationLevels = [
   {
-    heading: "You aren\u2019t behind",
-    subheading: "\u2014you\u2019re just performing a script\u2019s labor.",
+    heading: "You are NOT behind",
+    subheading: "-you are just performing a script's labor.",
   },
   {
     heading: "Manual repetition isn't work.",
-    subheading: "it\u2019s a logic failure and pure overhead.",
+    subheading: "it's a logic failure and pure overhead.",
   },
   {
     heading: "Stack the tools. Loop the logic.",
@@ -51,7 +51,7 @@ const narrationLevels = [
 export function ScrollNarrative() {
   const pageRef = useRef<HTMLDivElement | null>(null);
   const narrationRef = useRef<HTMLDivElement | null>(null);
-  const lineRefs = useRef<(HTMLParagraphElement | null)[]>([]);
+  const lineRefs = useRef<(HTMLDivElement | null)[]>([]);
   const socialUrl = useMemo(
     () => process.env.NEXT_PUBLIC_SOCIAL_CTA_URL || "https://www.linkedin.com",
     []
@@ -122,8 +122,8 @@ export function ScrollNarrative() {
   }, []);
 
   return (
-    <div ref={pageRef} className="mx-auto w-full max-w-7xl px-4 pb-8 pt-16 md:px-8 md:pb-10 md:pt-20">
-      <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-card">
+    <div ref={pageRef} className="mx-auto w-full max-w-7xl px-4 pb-8 md:px-8 md:pb-10">
+      <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-[#dbd8d2]">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 md:px-8">
           <div className="font-[family-name:var(--font-display)] text-2xl tracking-tight">
             Stack&Loop
@@ -138,7 +138,7 @@ export function ScrollNarrative() {
             <a href="#about" className="hover:underline">
               About
             </a>
-            <a href="#how" className="hover:underline">
+            <a href="#contact" className="hover:underline">
               Contact
             </a>
           </div>
@@ -154,7 +154,7 @@ export function ScrollNarrative() {
             <div
               key={level.heading}
               ref={(el) => {
-                lineRefs.current[index] = el as HTMLDivElement | null;
+                lineRefs.current[index] = el;
               }}
               className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-3 text-center"
             >
@@ -193,14 +193,30 @@ export function ScrollNarrative() {
           </div>
         </div>
         <div className="border-2 border-border bg-background p-5">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+          <h3 className="mb-2 font-[family-name:var(--font-display)] text-2xl">
+            Let&apos;s walk you through
+          </h3>
+          <p className="mb-4 text-sm leading-6 text-muted-foreground">
+            We start with your current process, identify high-friction loops, and then automate the
+            repeatable work in deliberate phases.
+          </p>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
             Typical Weekly Waste
           </p>
-          <div className="space-y-3 text-sm">
-            <div className="flex items-center justify-between border border-border px-3 py-2"><span>Manual follow-ups</span><strong>9h</strong></div>
+          <div className="space-y-2 text-sm">
+            <div className="flex items-center justify-between border border-border px-3 py-2"><span>Lead follow-ups</span><strong>9h</strong></div>
             <div className="flex items-center justify-between border border-border px-3 py-2"><span>Status updates</span><strong>6h</strong></div>
             <div className="flex items-center justify-between border border-border px-3 py-2"><span>CRM cleanup</span><strong>4h</strong></div>
+            <div className="flex items-center justify-between border border-border px-3 py-2"><span>Invoice reminders</span><strong>3h</strong></div>
+            <div className="flex items-center justify-between border border-border px-3 py-2"><span>Onboarding sequences</span><strong>3h</strong></div>
+            <div className="flex items-center justify-between border border-border px-3 py-2"><span>Ops handoffs</span><strong>4h</strong></div>
+            <div className="flex items-center justify-between border border-border px-3 py-2"><span>Weekly reporting</span><strong>5h</strong></div>
+            <div className="flex items-center justify-between border border-border px-3 py-2"><span>Exception triage</span><strong>2h</strong></div>
           </div>
+          <p className="mt-4 text-sm leading-6 text-muted-foreground">
+            Walkthrough: process audit, automation map, build sprint, supervised rollout, and weekly
+            optimization until it runs cleanly.
+          </p>
         </div>
       </section>
 

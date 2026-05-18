@@ -61,7 +61,9 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 10:57 | Synced context metadata after highlight-token push | `context.md` | `088b35b` | `main` | yes | Updated action log commit references |
 | 2026-05-19 11:05 | Fixed intro first-line visibility and refactored narrative to requested 4-level format | `src/components/narrative/scroll-narrative.tsx` | `d480a34` | `main` | yes | First statement now visible on landing without scroll; new main/subheading structure applied |
 | 2026-05-19 11:06 | Re-verified lint/build after narrative structure update | Build + lint outputs | `d480a34` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-19 11:07 | Synced context metadata after narrative-structure push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
+| 2026-05-19 11:07 | Synced context metadata after narrative-structure push | `context.md` | `a44ddc0` | `main` | yes | Updated latest commit SHA references |
+| 2026-05-19 11:16 | Updated intro copy/positioning, header color, and expanded first walkthrough card content | `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | First line now starts centered at load; header uses retro light gray; weekly waste box expanded with walkthrough narrative |
+| 2026-05-19 11:17 | Re-verified lint/build after intro and card enhancement pass | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
