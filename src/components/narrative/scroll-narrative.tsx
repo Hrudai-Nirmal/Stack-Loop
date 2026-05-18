@@ -187,9 +187,9 @@ export function ScrollNarrative() {
       <section
         id="work"
         data-animate="section"
-        className="mb-12 grid gap-6 border-2 border-border bg-card p-6 brutal-shadow lg:grid-cols-[1.2fr_0.8fr] lg:p-10"
+        className="mb-12 grid grid-cols-1 gap-6 border-2 border-border bg-card p-6 brutal-shadow lg:grid-cols-[1.2fr_0.8fr] lg:p-10"
       >
-        <div className="space-y-6">
+        <div className="order-1 w-full min-w-0 space-y-6">
           <h3 className="mb-2 font-[family-name:var(--font-display)] text-[2.05rem] leading-tight">
             Let&apos;s walk you through
           </h3>
@@ -201,7 +201,7 @@ export function ScrollNarrative() {
             Walkthrough
           </p>
           <div className="space-y-3">
-            <details className="group border border-border bg-card px-3 py-2 brutal-shadow">
+            <details className="group w-full border border-border bg-card px-3 py-2 brutal-shadow">
               <summary className="cursor-pointer list-none text-base font-semibold">
                 01. Workflow Audit
               </summary>
@@ -210,7 +210,7 @@ export function ScrollNarrative() {
                 time is being consumed.
               </p>
             </details>
-            <details className="group border border-border bg-card px-3 py-2 brutal-shadow">
+            <details className="group w-full border border-border bg-card px-3 py-2 brutal-shadow">
               <summary className="cursor-pointer list-none text-base font-semibold">
                 02. Automation Blueprint
               </summary>
@@ -219,7 +219,7 @@ export function ScrollNarrative() {
                 any automation logic.
               </p>
             </details>
-            <details className="group border border-border bg-card px-3 py-2 brutal-shadow">
+            <details className="group w-full border border-border bg-card px-3 py-2 brutal-shadow">
               <summary className="cursor-pointer list-none text-base font-semibold">
                 03. Build Sprint
               </summary>
@@ -228,7 +228,7 @@ export function ScrollNarrative() {
                 conditions.
               </p>
             </details>
-            <details className="group border border-border bg-card px-3 py-2 brutal-shadow">
+            <details className="group w-full border border-border bg-card px-3 py-2 brutal-shadow">
               <summary className="cursor-pointer list-none text-base font-semibold">
                 04. Supervised Rollout
               </summary>
@@ -237,7 +237,7 @@ export function ScrollNarrative() {
                 trusts the system from day one.
               </p>
             </details>
-            <details className="group border border-border bg-card px-3 py-2 brutal-shadow">
+            <details className="group w-full border border-border bg-card px-3 py-2 brutal-shadow">
               <summary className="cursor-pointer list-none text-base font-semibold">
                 05. Weekly Optimization
               </summary>
@@ -248,7 +248,7 @@ export function ScrollNarrative() {
             </details>
           </div>
         </div>
-        <div className="space-y-6 border-2 border-border bg-background p-5">
+        <div className="order-2 w-full min-w-0 space-y-6 border-2 border-border bg-background p-5">
           <Badge className="rounded-none border-2 border-border bg-secondary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-secondary-foreground">
             {heroCopy.eyebrow}
           </Badge>
