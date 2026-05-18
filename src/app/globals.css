@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 
 :root {
-  --background: #fffdf6;
+  --background: #f4f4f0;
   --foreground: #0d0d0d;
   --card: #fffaf0;
   --card-foreground: #0d0d0d;
@@ -21,7 +21,7 @@
   --input: #0d0d0d;
   --ring: #0d0d0d;
   --radius: 0.95rem;
-  --shadow-brutal: 6px 6px 0 #0d0d0d;
+  --shadow-brutal: 3px 3px 0 #0d0d0d;
 }
 
 @theme inline {
@@ -57,10 +57,7 @@
 }
 
 body {
-  background:
-    radial-gradient(circle at 8% 12%, #ffe767 0%, transparent 24%),
-    radial-gradient(circle at 92% 80%, #71f1e7 0%, transparent 22%),
-    var(--background);
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-space-grotesk), sans-serif;
   min-height: 100vh;
@@ -87,5 +84,5 @@ a,
   background-image: radial-gradient(#00000014 0.8px, transparent 0.8px);
   background-size: 5px 5px;
   pointer-events: none;
-  opacity: 0.4;
+  opacity: 0;
 }

@@ -24,7 +24,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-18 20:48 | Verified quality checks and fixed build regression | `src/components/narrative/scroll-narrative.tsx` | `0f2904f` | `main` | yes | Replaced unsupported `asChild` usage with styled anchor CTA |
 | 2026-05-18 20:50 | Added deployment/config docs and env example tracking support | `.gitignore`, `README.md`, `.env.example` | `9ed47e2` | `main` | yes | Enabled commit of `.env.example` and documented Vercel + Resend setup |
 | 2026-05-18 20:51 | Re-ran full verification suite before final ship | Build + lint outputs | `9ed47e2` | `main` | yes | `pnpm lint` and `pnpm build` both passed |
-| 2026-05-18 20:52 | Synced context metadata after docs deployment commit | `context.md` | pending | `main` | no | Updated latest commit SHA entries and push status |
+| 2026-05-18 20:52 | Synced context metadata after docs deployment commit | `context.md` | `6a081a2` | `main` | yes | Updated latest commit SHA entries and push status |
+| 2026-05-18 21:03 | Restyled landing page toward Gumroad-like layout and switched to plain solid background | `src/app/globals.css`, `src/components/narrative/*` | pending | `main` | no | Added cleaner header/hero rhythm, simplified borders, removed textured backdrop |
+| 2026-05-18 21:04 | Re-verified lint and production build after UI restyle | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
 
 ## Current Next Steps
-1. Deliver handoff summary.
+1. Commit and push Gumroad-style UI restyle.
+2. Collect visual feedback for next large UI iteration.

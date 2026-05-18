@@ -23,7 +23,7 @@ export function SectionShell({
       id={id}
       data-animate="section"
       className={cn(
-        "grain-overlay relative mx-auto w-full max-w-6xl border-4 border-border bg-card brutal-shadow",
+        "relative mx-auto w-full max-w-6xl border-2 border-border bg-card brutal-shadow",
         "px-6 py-10 md:px-10 md:py-12 lg:px-14 lg:py-14",
         className
       )}
@@ -54,4 +54,3 @@ export function SectionShell({
     </section>
   );
 }
-
