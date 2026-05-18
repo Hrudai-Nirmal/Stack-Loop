@@ -112,14 +112,20 @@ export function ScrollNarrative() {
     <div ref={pageRef} className="mx-auto w-full max-w-7xl px-4 pb-8 pt-16 md:px-8 md:pb-10 md:pt-20">
       <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-card">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 md:px-8">
-          <div className="font-[family-name:var(--font-display)] text-xl tracking-tight">
+          <div className="font-[family-name:var(--font-display)] text-2xl tracking-tight">
             Stack&Loop
           </div>
-          <div className="flex items-center gap-6 text-sm font-medium">
-            <a href="#how" className="hover:underline">
-              What we do
+          <div className="flex items-center gap-6 text-[0.95rem] font-medium">
+            <a href="#work" className="hover:underline">
+              Work
             </a>
-            <a href="#contact" className="hover:underline">
+            <a href="#services" className="hover:underline">
+              Services
+            </a>
+            <a href="#about" className="hover:underline">
+              About
+            </a>
+            <a href="#how" className="hover:underline">
               Contact
             </a>
           </div>
@@ -146,6 +152,7 @@ export function ScrollNarrative() {
       </section>
 
       <section
+        id="work"
         data-animate="section"
         className="mb-12 grid gap-6 border-2 border-border bg-card p-6 brutal-shadow lg:grid-cols-[1.2fr_0.8fr] lg:p-10"
       >
@@ -183,7 +190,7 @@ export function ScrollNarrative() {
         ))}
       </div>
 
-      <section data-animate="section" className="my-12 border-2 border-border bg-card p-6 brutal-shadow md:p-10">
+      <section id="services" data-animate="section" className="my-12 border-2 border-border bg-card p-6 brutal-shadow md:p-10">
         <div className="mb-6 space-y-3">
           <Badge className="rounded-none border-2 border-border bg-primary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-primary-foreground">
             What You Gain
@@ -205,7 +212,7 @@ export function ScrollNarrative() {
         </div>
       </section>
 
-      <section id="how" className="space-y-6">
+      <section id="about" className="space-y-6">
         {processSections.map((section) => (
           <SectionShell key={section.id} id={section.id} eyebrow={section.eyebrow} title={section.title} content={section.content} className="rounded-none border-2" />
         ))}
