@@ -184,27 +184,64 @@ export function ScrollNarrative() {
         className="mb-12 grid gap-6 border-2 border-border bg-card p-6 brutal-shadow lg:grid-cols-[1.2fr_0.8fr] lg:p-10"
       >
         <div className="space-y-6">
-          <h3 className="mb-2 font-[family-name:var(--font-display)] text-2xl">
+          <h3 className="mb-2 font-[family-name:var(--font-display)] text-[2.05rem] leading-tight">
             Let&apos;s walk you through
           </h3>
-          <p className="mb-4 text-sm leading-6 text-muted-foreground">
+          <p className="mb-4 text-base leading-7 text-muted-foreground">
             We start with your current process, identify high-friction loops, and then automate the
             repeatable work in deliberate phases.
           </p>
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
-            Typical Weekly Waste
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+            Walkthrough
           </p>
-          <div className="space-y-2 text-sm">
-            <div className="flex items-center justify-between border border-border px-3 py-2"><span>Lead follow-ups</span><strong>9h</strong></div>
-            <div className="flex items-center justify-between border border-border px-3 py-2"><span>Status updates</span><strong>6h</strong></div>
-            <div className="flex items-center justify-between border border-border px-3 py-2"><span>CRM cleanup</span><strong>4h</strong></div>
-            <div className="flex items-center justify-between border border-border px-3 py-2"><span>Invoice reminders</span><strong>3h</strong></div>
-            <div className="flex items-center justify-between border border-border px-3 py-2"><span>Onboarding sequences</span><strong>3h</strong></div>
-            <div className="flex items-center justify-between border border-border px-3 py-2"><span>Ops handoffs</span><strong>4h</strong></div>
-            <div className="flex items-center justify-between border border-border px-3 py-2"><span>Weekly reporting</span><strong>5h</strong></div>
-            <div className="flex items-center justify-between border border-border px-3 py-2"><span>Exception triage</span><strong>2h</strong></div>
+          <div className="space-y-2">
+            <details className="group border border-border bg-card px-3 py-2">
+              <summary className="cursor-pointer list-none text-base font-semibold">
+                01. Workflow Audit
+              </summary>
+              <p className="pt-2 text-sm leading-6 text-muted-foreground">
+                We map current tools, handoffs, and repeated operator actions to reveal exactly where
+                time is being consumed.
+              </p>
+            </details>
+            <details className="group border border-border bg-card px-3 py-2">
+              <summary className="cursor-pointer list-none text-base font-semibold">
+                02. Automation Blueprint
+              </summary>
+              <p className="pt-2 text-sm leading-6 text-muted-foreground">
+                We define triggers, decision paths, fallback behavior, and alert points before writing
+                any automation logic.
+              </p>
+            </details>
+            <details className="group border border-border bg-card px-3 py-2">
+              <summary className="cursor-pointer list-none text-base font-semibold">
+                03. Build Sprint
+              </summary>
+              <p className="pt-2 text-sm leading-6 text-muted-foreground">
+                We implement the highest-impact flows first and validate every stage with real operating
+                conditions.
+              </p>
+            </details>
+            <details className="group border border-border bg-card px-3 py-2">
+              <summary className="cursor-pointer list-none text-base font-semibold">
+                04. Supervised Rollout
+              </summary>
+              <p className="pt-2 text-sm leading-6 text-muted-foreground">
+                New automations launch with guardrails, manual overrides, and monitoring so your team
+                trusts the system from day one.
+              </p>
+            </details>
+            <details className="group border border-border bg-card px-3 py-2">
+              <summary className="cursor-pointer list-none text-base font-semibold">
+                05. Weekly Optimization
+              </summary>
+              <p className="pt-2 text-sm leading-6 text-muted-foreground">
+                We refine based on actual throughput, exception volume, and business outcomes to keep
+                performance compounding.
+              </p>
+            </details>
           </div>
-          <p className="mt-4 text-sm leading-6 text-muted-foreground">
+          <p className="mt-4 text-base leading-7 text-muted-foreground">
             Walkthrough: process audit, automation map, build sprint, supervised rollout, and weekly
             optimization until it runs cleanly.
           </p>
@@ -216,10 +253,10 @@ export function ScrollNarrative() {
           <h1 className="max-w-3xl font-[family-name:var(--font-display)] text-4xl leading-[1.03] md:text-5xl">
             {heroCopy.headline}
           </h1>
-          <p className="max-w-2xl text-lg leading-8 text-muted-foreground">{heroCopy.subtext}</p>
+          <p className="max-w-2xl text-xl leading-9 text-muted-foreground">{heroCopy.subtext}</p>
           <div className="flex flex-wrap gap-2">
             {heroCopy.chips.map((chip) => (
-              <Badge key={chip} variant="outline" className="rounded-none border-2 border-border bg-card px-3 py-1 text-[11px] uppercase tracking-[0.1em]">
+              <Badge key={chip} variant="outline" className="rounded-none border-2 border-border bg-card px-3 py-1 text-xs uppercase tracking-[0.1em]">
                 {chip}
               </Badge>
             ))}
