@@ -148,5 +148,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 10:49 | Synced context metadata after production-blocker fix push | `context.md` | pending | `main` | no | Recorded commit SHA and push status for latest fix |
 
+| 2026-05-20 11:03 | Updated circular background behavior: behind all content, 30% larger, 30s spin, and only below narrative | `src/components/narrative/scroll-narrative.tsx` | `7ad4384` | `main` | yes | Kept circles persistent on scroll and ensured they render just above plain background layer |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
