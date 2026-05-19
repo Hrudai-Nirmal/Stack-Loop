@@ -143,8 +143,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-20 10:35 | Synced context metadata after circular-background integration push | `context.md` | `c35396d` | `main` | yes | Updated latest commit SHA references |
 
 
-| 2026-05-20 10:46 | Fixed CircularText hook dependency warning that can fail strict production checks | `src/components/CircularText.tsx` | pending | `main` | no | Added `rotation` to `useEffect` dependency array to satisfy eslint/react-hooks |
-| 2026-05-20 10:47 | Re-verified lint and production build after deployment failure report | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed locally with zero errors |
+| 2026-05-20 10:46 | Fixed CircularText hook dependency warning that can fail strict production checks | `src/components/CircularText.tsx` | `48de1b7` | `main` | yes | Added `rotation` to `useEffect` dependency array to satisfy eslint/react-hooks |
+| 2026-05-20 10:47 | Re-verified lint and production build after deployment failure report | Build + lint outputs | `48de1b7` | `main` | yes | `pnpm lint` and `pnpm build` passed locally with zero errors |
+
+| 2026-05-20 10:49 | Synced context metadata after production-blocker fix push | `context.md` | pending | `main` | no | Recorded commit SHA and push status for latest fix |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
