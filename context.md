@@ -186,5 +186,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 14:19 | Applied cropped 1:1 `S&L logo2.png` as transparent max-fill favicon set | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `9a6435a` | `main` | yes | Used updated square source and packed with ~0.5% margin for near-maximum canvas usage while keeping standard favicon sizes `16/32/48` |
 
+| 2026-05-20 14:29 | Corrected icon extraction to preserve full `S&L` instead of only `S` | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `3612059` | `main` | yes | Reworked component filtering to retain all significant glyph parts and bridged close gaps before cropping/export |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
