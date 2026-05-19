@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { ContactForm } from "@/components/narrative/contact-form";
 import { SectionShell } from "@/components/narrative/section-shell";
+import CircularText from "@/components/CircularText";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -75,6 +76,26 @@ export function ScrollNarrative() {
     () => process.env.NEXT_PUBLIC_SOCIAL_CTA_URL || "https://www.linkedin.com",
     []
   );
+  const spinnerLayout = useMemo(
+    () => [
+      { left: "8%", top: "6%", duration: 20, size: 150 },
+      { left: "31%", top: "12%", duration: 26, size: 180 },
+      { left: "57%", top: "8%", duration: 22, size: 165 },
+      { left: "80%", top: "14%", duration: 28, size: 155 },
+      { left: "14%", top: "33%", duration: 24, size: 170 },
+      { left: "41%", top: "30%", duration: 30, size: 160 },
+      { left: "66%", top: "34%", duration: 21, size: 185 },
+      { left: "86%", top: "29%", duration: 27, size: 150 },
+      { left: "9%", top: "57%", duration: 23, size: 175 },
+      { left: "35%", top: "54%", duration: 29, size: 155 },
+      { left: "59%", top: "60%", duration: 25, size: 170 },
+      { left: "83%", top: "55%", duration: 31, size: 160 },
+      { left: "18%", top: "80%", duration: 22, size: 180 },
+      { left: "46%", top: "84%", duration: 28, size: 150 },
+      { left: "72%", top: "79%", duration: 24, size: 170 },
+    ],
+    []
+  );
 
   useEffect(() => {
     if (!pageRef.current) return;
@@ -132,7 +153,10 @@ export function ScrollNarrative() {
   }, []);
 
   return (
-    <div ref={pageRef} className="mx-auto w-full max-w-7xl px-4 pb-8 md:px-8 md:pb-10">
+    <div
+      ref={pageRef}
+      className="relative mx-auto w-full max-w-7xl px-4 pb-8 md:px-8 md:pb-10"
+    >
       <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-[#B6AE9FCC] backdrop-blur-md">
         <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 md:flex-nowrap md:px-8">
           <div className="border-2 border-border bg-[#EABE6C] px-3 py-1 font-[family-name:var(--font-display)] text-xl tracking-tight brutal-shadow sm:text-2xl">
@@ -184,10 +208,53 @@ export function ScrollNarrative() {
         </div>
       </section>
 
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 top-[100vh] z-0 overflow-hidden">
+        {spinnerLayout.map((item, index) => (
+          <div
+            key={`spin-${index}`}
+            className="absolute hidden md:block"
+            style={{
+              left: item.left,
+              top: item.top,
+              width: `${item.size}px`,
+              height: `${item.size}px`,
+              transform: "translate(-50%, -50%)",
+            }}
+          >
+            <CircularText
+              text="STACK*AND*LOOP*"
+              spinDuration={item.duration}
+              onHover="slowDown"
+              className="!h-full !w-full !text-black opacity-80"
+            />
+          </div>
+        ))}
+        {spinnerLayout.slice(0, 8).map((item, index) => (
+          <div
+            key={`spin-mobile-${index}`}
+            className="absolute md:hidden"
+            style={{
+              left: item.left,
+              top: item.top,
+              width: "125px",
+              height: "125px",
+              transform: "translate(-50%, -50%)",
+            }}
+          >
+            <CircularText
+              text="STACK*AND*LOOP*"
+              spinDuration={item.duration + 4}
+              onHover="slowDown"
+              className="!h-full !w-full !text-black opacity-70"
+            />
+          </div>
+        ))}
+      </div>
+
       <section
         id="work"
         data-animate="section"
-        className="mb-12 grid grid-cols-1 gap-6 border-2 border-border bg-card p-6 brutal-shadow lg:grid-cols-[1.2fr_0.8fr] lg:p-10"
+        className="relative z-10 mb-12 grid grid-cols-1 gap-6 border-2 border-border bg-card p-6 brutal-shadow lg:grid-cols-[1.2fr_0.8fr] lg:p-10"
       >
         <div className="order-1 w-full min-w-0 space-y-6">
           <h3 className="mb-2 font-[family-name:var(--font-display)] text-[2.05rem] leading-tight">
@@ -266,7 +333,7 @@ export function ScrollNarrative() {
         </div>
       </section>
 
-      <div className="space-y-10">
+      <div className="relative z-10 space-y-10">
         {problemSections.map((section) => (
           <SectionShell
             key={section.id}
@@ -286,7 +353,7 @@ export function ScrollNarrative() {
         ))}
       </div>
 
-      <section id="services" data-animate="section" className="my-12 border-2 border-border bg-card p-6 brutal-shadow md:p-10">
+      <section id="services" data-animate="section" className="relative z-10 my-12 border-2 border-border bg-card p-6 brutal-shadow md:p-10">
         <div className="mb-6 space-y-3">
           <Badge className="rounded-none border-2 border-border bg-primary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-primary-foreground">
             What You Gain
@@ -308,7 +375,7 @@ export function ScrollNarrative() {
         </div>
       </section>
 
-      <section id="contact" data-animate="section" className="my-12 border-2 border-border bg-card p-6 brutal-shadow md:p-10">
+      <section id="contact" data-animate="section" className="relative z-10 my-12 border-2 border-border bg-card p-6 brutal-shadow md:p-10">
         <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="space-y-3">
             <Badge className="rounded-none border-2 border-border bg-secondary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-secondary-foreground">
