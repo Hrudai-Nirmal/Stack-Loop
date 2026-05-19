@@ -122,9 +122,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 13:44 | Synced context metadata after header hover float update | `context.md` | `8ea039a` | `main` | yes | Updated latest commit SHA references |
 | 2026-05-19 13:52 | Added animated infinity-arrow treatment for “oo” in the header logo | `src/components/narrative/scroll-narrative.tsx`, `src/app/globals.css` | `98caa84` | `main` | yes | Replaced `oo` with inline SVG infinity loop and animated arrowhead |
 | 2026-05-19 13:53 | Re-verified lint/build after logo infinity animation update | Build + lint outputs | `98caa84` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-19 13:54 | Synced context metadata after infinity-logo animation push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
-| 2026-05-19 14:01 | Refined infinity logo mark: removed bounce, increased stroke weight, and connected arrowhead to loop path | `src/components/narrative/scroll-narrative.tsx`, `src/app/globals.css` | pending | `main` | no | Converted to single marker-ended path so arrow feels like a looping infinity arrow |
-| 2026-05-19 14:02 | Re-verified lint/build after infinity mark refinement | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 13:54 | Synced context metadata after infinity-logo animation push | `context.md` | `4fd76f0` | `main` | yes | Updated latest commit SHA references |
+| 2026-05-19 14:01 | Refined infinity logo mark: removed bounce, increased stroke weight, and connected arrowhead to loop path | `src/components/narrative/scroll-narrative.tsx`, `src/app/globals.css` | `914b7f6` | `main` | yes | Converted to single marker-ended path so arrow feels like a looping infinity arrow |
+| 2026-05-19 14:02 | Re-verified lint/build after infinity mark refinement | Build + lint outputs | `914b7f6` | `main` | yes | `pnpm lint` and `pnpm build` passed |
+| 2026-05-19 14:03 | Synced context metadata after infinity-mark refinement push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
