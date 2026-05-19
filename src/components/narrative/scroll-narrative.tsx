@@ -67,6 +67,30 @@ const narrationLevels = [
   },
 ];
 
+function InfinityOo() {
+  return (
+    <svg
+      aria-hidden
+      viewBox="0 0 120 54"
+      className="oo-infinity mx-[1px] inline-block h-[0.85em] w-[1.45em] align-[-0.06em]"
+    >
+      <path
+        d="M4 27C4 15.954 12.954 7 24 7C35.046 7 43.5 16.5 60 27C76.5 37.5 84.954 47 96 47C107.046 47 116 38.046 116 27C116 15.954 107.046 7 96 7C84.954 7 76.5 16.5 60 27C43.5 37.5 35.046 47 24 47C12.954 47 4 38.046 4 27Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M113 27L96 18.5V35.5L113 27Z"
+        className="oo-infinity-arrow"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
 export function ScrollNarrative() {
   const pageRef = useRef<HTMLDivElement | null>(null);
   const narrationRef = useRef<HTMLDivElement | null>(null);
@@ -136,7 +160,9 @@ export function ScrollNarrative() {
       <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-[#B6AE9FCC] backdrop-blur-md">
         <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 md:flex-nowrap md:px-8">
           <div className="border-2 border-border bg-[#EABE6C] px-3 py-1 font-[family-name:var(--font-display)] text-xl tracking-tight brutal-shadow sm:text-2xl">
-            Stack&Loop
+            Stack&L
+            <InfinityOo />
+            p
           </div>
           <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm font-medium sm:text-[0.95rem]">
             <a href="#work" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1">

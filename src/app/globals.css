@@ -90,3 +90,35 @@ a,
   pointer-events: none;
   opacity: 0;
 }
+
+@keyframes infinity-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.06em);
+  }
+}
+
+@keyframes infinity-arrow-pulse {
+  0%,
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(1px) scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.oo-infinity {
+  animation: infinity-bob 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.oo-infinity-arrow {
+  animation: infinity-arrow-pulse 1.4s ease-in-out infinite;
+  transform-origin: center;
+}

@@ -120,6 +120,8 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 13:42 | Replaced header link hover underline with float hover animation | `src/components/narrative/scroll-narrative.tsx` | `19cdf06` | `main` | yes | Added smooth upward translate on hover for header items |
 | 2026-05-19 13:43 | Re-verified lint/build after header hover animation change | Build + lint outputs | `19cdf06` | `main` | yes | `pnpm lint` and `pnpm build` passed |
 | 2026-05-19 13:44 | Synced context metadata after header hover float update | `context.md` | pending | `main` | no | Updated latest commit SHA references |
+| 2026-05-19 13:52 | Added animated infinity-arrow treatment for “oo” in the header logo | `src/components/narrative/scroll-narrative.tsx`, `src/app/globals.css` | pending | `main` | no | Replaced `oo` with inline SVG infinity loop and animated arrowhead |
+| 2026-05-19 13:53 | Re-verified lint/build after logo infinity animation update | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
