@@ -184,5 +184,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 14:08 | Increased tab favicon legibility with favicon-specific packing and vertical emphasis | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `6e0a3a3` | `main` | yes | Built dedicated favicon frames (`16/32/48`) with tighter bounds and ~1.55x vertical scaling to counter wide wordmark shrink in square tabs |
 
+| 2026-05-20 14:19 | Applied cropped 1:1 `S&L logo2.png` as transparent max-fill favicon set | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `9a6435a` | `main` | yes | Used updated square source and packed with ~0.5% margin for near-maximum canvas usage while keeping standard favicon sizes `16/32/48` |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
