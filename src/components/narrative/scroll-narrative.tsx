@@ -78,21 +78,28 @@ export function ScrollNarrative() {
   );
   const spinnerLayout = useMemo(
     () => [
-      { left: "8%", top: "6%", size: 195 },
-      { left: "31%", top: "12%", size: 234 },
-      { left: "57%", top: "8%", size: 215 },
-      { left: "80%", top: "14%", size: 202 },
-      { left: "14%", top: "33%", size: 221 },
-      { left: "41%", top: "30%", size: 208 },
-      { left: "66%", top: "34%", size: 241 },
-      { left: "86%", top: "29%", size: 195 },
-      { left: "9%", top: "57%", size: 228 },
-      { left: "35%", top: "54%", size: 202 },
-      { left: "59%", top: "60%", size: 221 },
-      { left: "83%", top: "55%", size: 208 },
-      { left: "18%", top: "80%", size: 234 },
-      { left: "46%", top: "84%", size: 195 },
-      { left: "72%", top: "79%", size: 221 },
+      { left: "-6%", top: "5%", size: 195 },
+      { left: "14%", top: "11%", size: 238 },
+      { left: "35%", top: "7%", size: 278 },
+      { left: "58%", top: "13%", size: 212 },
+      { left: "79%", top: "9%", size: 290 },
+      { left: "104%", top: "15%", size: 226 },
+      { left: "3%", top: "30%", size: 262 },
+      { left: "26%", top: "34%", size: 205 },
+      { left: "50%", top: "29%", size: 244 },
+      { left: "72%", top: "35%", size: 293 },
+      { left: "96%", top: "31%", size: 219 },
+      { left: "-4%", top: "54%", size: 270 },
+      { left: "18%", top: "58%", size: 230 },
+      { left: "41%", top: "52%", size: 288 },
+      { left: "64%", top: "60%", size: 201 },
+      { left: "87%", top: "56%", size: 248 },
+      { left: "108%", top: "62%", size: 236 },
+      { left: "10%", top: "83%", size: 282 },
+      { left: "33%", top: "88%", size: 216 },
+      { left: "56%", top: "80%", size: 293 },
+      { left: "78%", top: "86%", size: 241 },
+      { left: "101%", top: "82%", size: 222 },
     ],
     []
   );
@@ -208,7 +215,7 @@ export function ScrollNarrative() {
         </div>
       </section>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 top-[100vh] z-[1] overflow-hidden">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 top-[400vh] z-[1] overflow-hidden">
         {spinnerLayout.map((item, index) => (
           <div
             key={`spin-${index}`}
@@ -224,7 +231,7 @@ export function ScrollNarrative() {
             <CircularText
               text="STACK*AND*LOOP*"
               spinDuration={30}
-              className="!h-full !w-full !text-black opacity-80"
+              className="!h-full !w-full !text-black !font-black opacity-80"
             />
           </div>
         ))}
@@ -235,15 +242,15 @@ export function ScrollNarrative() {
             style={{
               left: item.left,
               top: item.top,
-              width: "163px",
-              height: "163px",
+              width: `${Math.round(item.size * 0.84)}px`,
+              height: `${Math.round(item.size * 0.84)}px`,
               transform: "translate(-50%, -50%)",
             }}
           >
             <CircularText
               text="STACK*AND*LOOP*"
               spinDuration={30}
-              className="!h-full !w-full !text-black opacity-70"
+              className="!h-full !w-full !text-black !font-black opacity-70"
             />
           </div>
         ))}
