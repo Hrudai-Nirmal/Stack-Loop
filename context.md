@@ -196,5 +196,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 15:08 | Updated standalone `/logo` vertical text scale from `1.6` to `1.8` | `src/app/logo/page.tsx` | `66accd6` | `main` | yes | Increased `scaleY` to further square the visual footprint per request |
 
+| 2026-05-20 15:16 | Updated standalone `/logo` vertical text scale from `1.8` to `2.5` | `src/app/logo/page.tsx` | `8c95fe2` | `main` | yes | Applied requested extreme vertical scaling for logo-proportion experimentation |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
