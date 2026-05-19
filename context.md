@@ -198,5 +198,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 15:16 | Updated standalone `/logo` vertical text scale from `1.8` to `2.5` | `src/app/logo/page.tsx` | `8c95fe2` | `main` | yes | Applied requested extreme vertical scaling for logo-proportion experimentation |
 
+| 2026-05-20 16:31 | Applied `Screenshot 2026-05-20 042108.png` as transparent max-fill favicon/app icons | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `e6ae352` | `main` | yes | Used exact desktop screenshot source, removed flat background via edge-connected mask, and exported standard favicon sizes `16/32/48` |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
