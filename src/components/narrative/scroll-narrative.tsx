@@ -76,33 +76,46 @@ export function ScrollNarrative() {
     () => process.env.NEXT_PUBLIC_SOCIAL_CTA_URL || "https://www.linkedin.com",
     []
   );
-  const spinnerLayout = useMemo(
-    () => [
-      { left: "-6%", top: "5%", size: 300 },
-      { left: "14%", top: "11%", size: 366 },
-      { left: "35%", top: "7%", size: 428 },
-      { left: "58%", top: "13%", size: 327 },
-      { left: "79%", top: "9%", size: 444 },
-      { left: "104%", top: "15%", size: 349 },
-      { left: "3%", top: "30%", size: 403 },
-      { left: "26%", top: "34%", size: 315 },
-      { left: "50%", top: "29%", size: 375 },
-      { left: "72%", top: "35%", size: 500 },
-      { left: "96%", top: "31%", size: 338 },
-      { left: "-4%", top: "54%", size: 415 },
-      { left: "18%", top: "58%", size: 354 },
-      { left: "41%", top: "52%", size: 487 },
-      { left: "64%", top: "60%", size: 310 },
-      { left: "87%", top: "56%", size: 382 },
-      { left: "108%", top: "62%", size: 361 },
-      { left: "10%", top: "83%", size: 469 },
-      { left: "33%", top: "88%", size: 333 },
-      { left: "56%", top: "80%", size: 491 },
-      { left: "78%", top: "86%", size: 371 },
-      { left: "101%", top: "82%", size: 345 },
-    ],
-    []
-  );
+  const spinnerLayout = useMemo(() => {
+    type SpinnerItem = { left: string; top: string; size: number };
+    const total = 10;
+    const minSize = 300;
+    const maxSize = 500;
+    const minGap = 15;
+    let seed = 73021;
+    const nextRand = () => {
+      seed = (seed * 1664525 + 1013904223) % 4294967296;
+      return seed / 4294967296;
+    };
+
+    const circles: SpinnerItem[] = [];
+    let guard = 0;
+    while (circles.length < total && guard < 1200) {
+      guard += 1;
+      const size = Math.round(minSize + nextRand() * (maxSize - minSize));
+      const left = -10 + nextRand() * 120;
+      const top = 6 + nextRand() * 88;
+
+      const fitsSpacing = circles.every((c) => {
+        const existingLeft = parseFloat(c.left);
+        const existingTop = parseFloat(c.top);
+        const dx = left - existingLeft;
+        const dy = top - existingTop;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        return distance >= minGap;
+      });
+
+      if (fitsSpacing) {
+        circles.push({
+          left: `${left.toFixed(1)}%`,
+          top: `${top.toFixed(1)}%`,
+          size,
+        });
+      }
+    }
+
+    return circles;
+  }, []);
 
   useEffect(() => {
     if (!pageRef.current) return;
@@ -215,7 +228,7 @@ export function ScrollNarrative() {
         </div>
       </section>
 
-      <div className="pointer-events-none absolute bottom-0 left-1/2 top-[400vh] z-[1] w-screen -translate-x-1/2 overflow-hidden">
+      <div className="pointer-events-none absolute bottom-0 left-1/2 top-[550vh] z-[1] w-screen -translate-x-1/2 overflow-hidden">
         {spinnerLayout.map((item, index) => (
           <div
             key={`spin-${index}`}
@@ -235,7 +248,7 @@ export function ScrollNarrative() {
             />
           </div>
         ))}
-        {spinnerLayout.slice(0, 8).map((item, index) => (
+        {spinnerLayout.map((item, index) => (
           <div
             key={`spin-mobile-${index}`}
             className="absolute md:hidden"
