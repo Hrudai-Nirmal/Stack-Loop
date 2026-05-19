@@ -170,5 +170,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 12:48 | Rebuilt transparent icon set from user-specified desktop image file | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `229e1a2` | `main` | yes | Source used exactly: `C:/Users/prime/OneDrive/Desktop/Generated image 1.png`; checkerboard removed via edge-connected mask before ICO export |
 
+| 2026-05-20 13:02 | Converted `S&L logo1.png` into transparent favicon/app icon set | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `9fb9393` | `main` | yes | Used exact source `C:/Users/prime/OneDrive/Desktop/S&L logo1.png`; removed beige paper background with border-connected mask and exported ICO/PNG assets |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
