@@ -152,5 +152,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 11:12 | Repositioned and randomized circular background field below deep scroll with larger bold rings | `src/components/narrative/scroll-narrative.tsx` | `cfd9c98` | `main` | yes | Circle layer now starts at `400vh`, sizes span current minimum to +50%, side clipping allowed via off-canvas left values |
 
+| 2026-05-20 11:24 | Updated circle size bounds to 300-500, strengthened ring typography, and fixed premature side clipping | `src/components/narrative/scroll-narrative.tsx`, `src/components/CircularText.tsx` | `bc24dfd` | `main` | yes | Circle layer now uses full viewport width (`w-screen` centered) so clipping aligns with actual screen borders |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
