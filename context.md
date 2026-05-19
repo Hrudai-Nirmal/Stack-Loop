@@ -156,5 +156,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 11:34 | Changed circular field to start at 550vh and switched to randomized 10-circle spaced layout | `src/components/narrative/scroll-narrative.tsx` | `6f1bec2` | `main` | yes | Enforced exactly 10 circles with seeded random sizes (300-500) and spacing threshold to avoid row-like placement |
 
+| 2026-05-20 11:43 | Replaced procedural circle generation with curated static 10-circle layout and preserved 20vw center exclusion gap | `src/components/narrative/scroll-narrative.tsx` | `844c4d1` | `main` | yes | Hand-selected random-style placement for easier iterative tuning across future passes |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
