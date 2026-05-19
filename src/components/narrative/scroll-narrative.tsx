@@ -78,28 +78,28 @@ export function ScrollNarrative() {
   );
   const spinnerLayout = useMemo(
     () => [
-      { left: "-6%", top: "5%", size: 195 },
-      { left: "14%", top: "11%", size: 238 },
-      { left: "35%", top: "7%", size: 278 },
-      { left: "58%", top: "13%", size: 212 },
-      { left: "79%", top: "9%", size: 290 },
-      { left: "104%", top: "15%", size: 226 },
-      { left: "3%", top: "30%", size: 262 },
-      { left: "26%", top: "34%", size: 205 },
-      { left: "50%", top: "29%", size: 244 },
-      { left: "72%", top: "35%", size: 293 },
-      { left: "96%", top: "31%", size: 219 },
-      { left: "-4%", top: "54%", size: 270 },
-      { left: "18%", top: "58%", size: 230 },
-      { left: "41%", top: "52%", size: 288 },
-      { left: "64%", top: "60%", size: 201 },
-      { left: "87%", top: "56%", size: 248 },
-      { left: "108%", top: "62%", size: 236 },
-      { left: "10%", top: "83%", size: 282 },
-      { left: "33%", top: "88%", size: 216 },
-      { left: "56%", top: "80%", size: 293 },
-      { left: "78%", top: "86%", size: 241 },
-      { left: "101%", top: "82%", size: 222 },
+      { left: "-6%", top: "5%", size: 300 },
+      { left: "14%", top: "11%", size: 366 },
+      { left: "35%", top: "7%", size: 428 },
+      { left: "58%", top: "13%", size: 327 },
+      { left: "79%", top: "9%", size: 444 },
+      { left: "104%", top: "15%", size: 349 },
+      { left: "3%", top: "30%", size: 403 },
+      { left: "26%", top: "34%", size: 315 },
+      { left: "50%", top: "29%", size: 375 },
+      { left: "72%", top: "35%", size: 500 },
+      { left: "96%", top: "31%", size: 338 },
+      { left: "-4%", top: "54%", size: 415 },
+      { left: "18%", top: "58%", size: 354 },
+      { left: "41%", top: "52%", size: 487 },
+      { left: "64%", top: "60%", size: 310 },
+      { left: "87%", top: "56%", size: 382 },
+      { left: "108%", top: "62%", size: 361 },
+      { left: "10%", top: "83%", size: 469 },
+      { left: "33%", top: "88%", size: 333 },
+      { left: "56%", top: "80%", size: 491 },
+      { left: "78%", top: "86%", size: 371 },
+      { left: "101%", top: "82%", size: 345 },
     ],
     []
   );
@@ -215,7 +215,7 @@ export function ScrollNarrative() {
         </div>
       </section>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 top-[400vh] z-[1] overflow-hidden">
+      <div className="pointer-events-none absolute bottom-0 left-1/2 top-[400vh] z-[1] w-screen -translate-x-1/2 overflow-hidden">
         {spinnerLayout.map((item, index) => (
           <div
             key={`spin-${index}`}
@@ -242,8 +242,8 @@ export function ScrollNarrative() {
             style={{
               left: item.left,
               top: item.top,
-              width: `${Math.round(item.size * 0.84)}px`,
-              height: `${Math.round(item.size * 0.84)}px`,
+              width: `${item.size}px`,
+              height: `${item.size}px`,
               transform: "translate(-50%, -50%)",
             }}
           >
