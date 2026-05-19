@@ -139,16 +139,16 @@ export function ScrollNarrative() {
             Stack&Loop
           </div>
           <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm font-medium sm:text-[0.95rem]">
-            <a href="#work" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow hover:underline">
+            <a href="#work" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1">
               Work
             </a>
-            <a href="#services" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow hover:underline">
+            <a href="#services" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1">
               Services
             </a>
-            <a href="#about" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow hover:underline">
+            <a href="#about" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1">
               About
             </a>
-            <a href="#contact" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow hover:underline">
+            <a href="#contact" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1">
               Contact
             </a>
             <div className="flex size-10 items-center justify-center rounded-[999px] border-2 border-border bg-[#EABE6C] brutal-shadow">
