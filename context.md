@@ -176,5 +176,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 13:27 | Applied latest provided S&L wordmark as transparent standard favicon set | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `61e4ed9` | `main` | yes | Re-extracted attached logo, removed background, and exported standard favicon ICO sizes `16/32/48` plus `512` icon and `180` apple icon |
 
+| 2026-05-20 13:36 | Increased favicon logo scale for stronger tab visibility | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `fb3a795` | `main` | yes | Reduced internal icon padding to ~4% and regenerated standard favicon/app icon sizes |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
