@@ -172,5 +172,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 13:02 | Converted `S&L logo1.png` into transparent favicon/app icon set | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `9fb9393` | `main` | yes | Used exact source `C:/Users/prime/OneDrive/Desktop/S&L logo1.png`; removed beige paper background with border-connected mask and exported ICO/PNG assets |
 
+| 2026-05-20 13:14 | Reprocessed `S&L logo1.png` with GrabCut to ensure true transparency and standard favicon sizing | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `b9e3308` | `main` | yes | Exported favicon ICO using standard sizes `16/32/48`; verified `icon.png` corner alpha values are fully transparent |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
