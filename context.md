@@ -150,5 +150,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 11:03 | Updated circular background behavior: behind all content, 30% larger, 30s spin, and only below narrative | `src/components/narrative/scroll-narrative.tsx` | `7ad4384` | `main` | yes | Kept circles persistent on scroll and ensured they render just above plain background layer |
 
+| 2026-05-20 11:12 | Repositioned and randomized circular background field below deep scroll with larger bold rings | `src/components/narrative/scroll-narrative.tsx` | `cfd9c98` | `main` | yes | Circle layer now starts at `400vh`, sizes span current minimum to +50%, side clipping allowed via off-canvas left values |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
