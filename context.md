@@ -178,5 +178,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 13:36 | Increased favicon logo scale for stronger tab visibility | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `fb3a795` | `main` | yes | Reduced internal icon padding to ~4% and regenerated standard favicon/app icon sizes |
 
+| 2026-05-20 13:45 | Increased favicon logo scale by an additional 50% for stronger tab visibility | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `1ca136c` | `main` | yes | Upscaled non-transparent icon subject by `1.5x` and regenerated standard favicon/app icon outputs |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
