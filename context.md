@@ -168,5 +168,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 12:34 | Converted provided logo into transparent favicon/app icons to remove checkerboard background | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `f6f4a43` | `main` | yes | Applied edge-connected checkerboard removal and regenerated ICO+PNG icon assets for clean tab rendering |
 
+| 2026-05-20 12:48 | Rebuilt transparent icon set from user-specified desktop image file | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `229e1a2` | `main` | yes | Source used exactly: `C:/Users/prime/OneDrive/Desktop/Generated image 1.png`; checkerboard removed via edge-connected mask before ICO export |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
