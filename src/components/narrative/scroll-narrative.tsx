@@ -80,7 +80,7 @@ export function ScrollNarrative() {
     () => [
       { left: "-7%", top: "8%", size: 336 },
       { left: "17%", top: "18%", size: 482 },
-      { left: "29%", top: "39%", size: 314 },
+      { left: "29%", top: "46%", size: 314 },
       { left: "9%", top: "66%", size: 438 },
       { left: "24%", top: "86%", size: 366 },
       { left: "71%", top: "12%", size: 401 },
