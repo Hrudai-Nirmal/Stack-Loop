@@ -137,9 +137,10 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-20 10:16 | Synced context metadata after TextPressure bugfix push | `context.md` | `35497a0` | `main` | yes | Updated latest commit SHA references |
 | 2026-05-20 10:22 | Reverted last-sentence TextPressure effect and restored original static narrative rendering | `src/components/narrative/scroll-narrative.tsx`, `src/components/ui/text-pressure.tsx` | `704aa75` | `main` | yes | Removed pressure component usage and deleted helper file |
 | 2026-05-20 10:23 | Re-verified lint/build after TextPressure revert | Build + lint outputs | `704aa75` | `main` | yes | `pnpm lint` and `pnpm build` passed |
-| 2026-05-20 10:24 | Synced context metadata after TextPressure revert push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
-| 2026-05-20 10:33 | Added CircularText spinning background layer below narrative with even/random distribution | `src/components/narrative/scroll-narrative.tsx`, `src/components/CircularText.tsx` | pending | `main` | no | Multiple `STACK*AND*LOOP*` circles in black; responsive counts for desktop/mobile; foreground content preserved |
-| 2026-05-20 10:34 | Re-verified lint/build after CircularText background integration | Build + lint outputs | pending | `main` | no | `pnpm build` passed; lint warning remains in generated CircularText template (`rotation` hook dependency) |
+| 2026-05-20 10:24 | Synced context metadata after TextPressure revert push | `context.md` | `04d2737` | `main` | yes | Updated latest commit SHA references |
+| 2026-05-20 10:33 | Added CircularText spinning background layer below narrative with even/random distribution | `src/components/narrative/scroll-narrative.tsx`, `src/components/CircularText.tsx` | `badad64` | `main` | yes | Multiple `STACK*AND*LOOP*` circles in black; responsive counts for desktop/mobile; foreground content preserved |
+| 2026-05-20 10:34 | Re-verified lint/build after CircularText background integration | Build + lint outputs | `badad64` | `main` | yes | `pnpm build` passed; lint warning remains in generated CircularText template (`rotation` hook dependency) |
+| 2026-05-20 10:35 | Synced context metadata after circular-background integration push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
