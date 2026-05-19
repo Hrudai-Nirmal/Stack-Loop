@@ -192,5 +192,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 14:49 | Increased standalone `/logo` text height to better equalize width/height footprint | `src/app/logo/page.tsx` | `af5cc51` | `main` | yes | Applied vertical glyph scaling (`scaleY(1.38)`) to make logo composition more square |
 
+| 2026-05-20 15:01 | Updated standalone `/logo` vertical text scale from `1.50` to `1.6` | `src/app/logo/page.tsx` | `68c29f6` | `main` | yes | Also fixed malformed line break inside class string while applying new transform value |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
