@@ -154,5 +154,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 11:24 | Updated circle size bounds to 300-500, strengthened ring typography, and fixed premature side clipping | `src/components/narrative/scroll-narrative.tsx`, `src/components/CircularText.tsx` | `bc24dfd` | `main` | yes | Circle layer now uses full viewport width (`w-screen` centered) so clipping aligns with actual screen borders |
 
+| 2026-05-20 11:34 | Changed circular field to start at 550vh and switched to randomized 10-circle spaced layout | `src/components/narrative/scroll-narrative.tsx` | `6f1bec2` | `main` | yes | Enforced exactly 10 circles with seeded random sizes (300-500) and spacing threshold to avoid row-like placement |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
