@@ -166,5 +166,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 12:22 | Applied selected generated logo to browser/app icons | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `cd3165e` | `main` | yes | Replaced favicon and added Next App Router `icon.png` + `apple-icon.png` using latest generated logo asset |
 
+| 2026-05-20 12:34 | Converted provided logo into transparent favicon/app icons to remove checkerboard background | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `f6f4a43` | `main` | yes | Applied edge-connected checkerboard removal and regenerated ICO+PNG icon assets for clean tab rendering |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
