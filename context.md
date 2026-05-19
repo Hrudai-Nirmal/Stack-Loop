@@ -190,5 +190,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 14:41 | Added standalone neo-brutalist logo page for screenshot capture | `src/app/logo/page.tsx` | `17c89eb` | `main` | yes | New `/logo` route with square-centered `S&L` composition; font color `#240A34`, `S/L` shadows `#EABE6C`, `&` shadow `#891652` |
 
+| 2026-05-20 14:49 | Increased standalone `/logo` text height to better equalize width/height footprint | `src/app/logo/page.tsx` | `af5cc51` | `main` | yes | Applied vertical glyph scaling (`scaleY(1.38)`) to make logo composition more square |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
