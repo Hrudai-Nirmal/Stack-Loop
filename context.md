@@ -162,5 +162,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 11:58 | Lowered the left-adjacent circle again to align its center with the first card lower-left edge | `src/components/narrative/scroll-narrative.tsx` | `f66fa02` | `main` | yes | Updated curated circle position from `top: 46%` to `top: 62%` |
 
+| 2026-05-20 12:07 | Replaced circle field with a new hand-curated random layout and even directional spacing | `src/components/narrative/scroll-narrative.tsx` | `143639d` | `main` | yes | Refreshed all 10 coordinates/sizes while preserving center gap, 550vh start, and 300-500 size limits |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
