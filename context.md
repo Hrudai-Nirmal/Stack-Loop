@@ -160,5 +160,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 11:51 | Lowered the circle immediately left of the first card for better composition balance | `src/components/narrative/scroll-narrative.tsx` | `5ee9df9` | `main` | yes | Adjusted curated layout item from `top: 39%` to `top: 46%` |
 
+| 2026-05-20 11:58 | Lowered the left-adjacent circle again to align its center with the first card lower-left edge | `src/components/narrative/scroll-narrative.tsx` | `f66fa02` | `main` | yes | Updated curated circle position from `top: 46%` to `top: 62%` |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
