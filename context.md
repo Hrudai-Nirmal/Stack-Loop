@@ -188,5 +188,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 14:29 | Corrected icon extraction to preserve full `S&L` instead of only `S` | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `3612059` | `main` | yes | Reworked component filtering to retain all significant glyph parts and bridged close gaps before cropping/export |
 
+| 2026-05-20 14:41 | Added standalone neo-brutalist logo page for screenshot capture | `src/app/logo/page.tsx` | `17c89eb` | `main` | yes | New `/logo` route with square-centered `S&L` composition; font color `#240A34`, `S/L` shadows `#EABE6C`, `&` shadow `#891652` |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
