@@ -10,7 +10,6 @@ import { SectionShell } from "@/components/narrative/section-shell";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import TextPressure from "@/components/ui/text-pressure";
 import { heroCopy, problemSections } from "@/lib/site-content";
 import { cn } from "@/lib/utils";
 
@@ -59,8 +58,12 @@ const narrationLevels = [
     ),
   },
   {
-    heading: "Stack and Loop.",
-    pressure: true,
+    heading: (
+      <>
+        <span className="[text-shadow:3px_3px_0_#B03052]">Stack</span> and{" "}
+        <span className="[text-shadow:3px_3px_0_#B03052]">Loop</span>.
+      </>
+    ),
   },
 ];
 
@@ -168,28 +171,9 @@ export function ScrollNarrative() {
               }}
               className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-3 text-center"
             >
-              {level.pressure ? (
-                <div className="h-28 w-full max-w-4xl md:h-32">
-                  <TextPressure
-                    text={String(level.heading)}
-                    fontFamily="var(--font-display)"
-                    flex={false}
-                    alpha={false}
-                    stroke={false}
-                    width={false}
-                    weight
-                    italic={false}
-                    textColor="#3D0301"
-                    minFontSize={44}
-                    maxFontSize={108}
-                    className="font-[family-name:var(--font-display)] leading-tight"
-                  />
-                </div>
-              ) : (
-                <p className="font-[family-name:var(--font-display)] text-5xl leading-tight [text-shadow:3px_3px_0_#EABE6C] md:text-8xl">
-                  {level.heading}
-                </p>
-              )}
+              <p className="font-[family-name:var(--font-display)] text-5xl leading-tight [text-shadow:3px_3px_0_#EABE6C] md:text-8xl">
+                {level.heading}
+              </p>
               {level.subheading ? (
                 <p className="max-w-4xl text-xl font-medium leading-tight text-muted-foreground md:text-3xl">
                   {level.subheading}

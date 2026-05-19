@@ -135,6 +135,8 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-20 10:14 | Fixed TextPressure spacing/clipping bug on last narrative sentence | `src/components/ui/text-pressure.tsx`, `src/components/narrative/scroll-narrative.tsx` | `bc323ba` | `main` | yes | Preserved spaces with non-breaking spaces, added max font cap, and tuned sentence-level props to prevent overflow |
 | 2026-05-20 10:15 | Re-verified lint/build after TextPressure bugfix pass | Build + lint outputs | `bc323ba` | `main` | yes | `pnpm lint` and `pnpm build` passed |
 | 2026-05-20 10:16 | Synced context metadata after TextPressure bugfix push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
+| 2026-05-20 10:22 | Reverted last-sentence TextPressure effect and restored original static narrative rendering | `src/components/narrative/scroll-narrative.tsx`, `src/components/ui/text-pressure.tsx` | pending | `main` | no | Removed pressure component usage and deleted helper file |
+| 2026-05-20 10:23 | Re-verified lint/build after TextPressure revert | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
