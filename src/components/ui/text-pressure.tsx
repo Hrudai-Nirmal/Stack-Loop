@@ -8,6 +8,7 @@ interface TextPressureProps {
   text?: string;
   fontFamily?: string;
   fontUrl?: string;
+  maxFontSize?: number;
   width?: boolean;
   weight?: boolean;
   italic?: boolean;
@@ -66,6 +67,7 @@ export default function TextPressure({
   strokeWidth = 2,
   className = "",
   minFontSize = 24,
+  maxFontSize = 150,
 }: TextPressureProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const titleRef = useRef<HTMLHeadingElement | null>(null);
@@ -118,6 +120,7 @@ export default function TextPressure({
     const { width: containerW, height: containerH } =
       containerRef.current.getBoundingClientRect();
     let newFontSize = containerW / (chars.length / 2);
+    newFontSize = Math.min(newFontSize, maxFontSize);
     newFontSize = Math.max(newFontSize, minFontSize);
 
     setFontSize(newFontSize);
@@ -133,7 +136,7 @@ export default function TextPressure({
         setLineHeight(yRatio);
       }
     });
-  }, [chars.length, minFontSize, scale]);
+  }, [chars.length, maxFontSize, minFontSize, scale]);
 
   useEffect(() => {
     const debouncedSetSize = debounce(setSize, 100);
@@ -240,9 +243,9 @@ export default function TextPressure({
               spansRef.current[i] = el;
             }}
             data-char={char}
-            className="inline-block"
+            className="inline-block whitespace-pre"
           >
-            {char}
+            {char === " " ? "\u00A0" : char}
           </span>
         ))}
       </h1>

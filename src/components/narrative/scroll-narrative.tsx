@@ -176,11 +176,12 @@ export function ScrollNarrative() {
                     flex={false}
                     alpha={false}
                     stroke={false}
-                    width
+                    width={false}
                     weight
                     italic={false}
                     textColor="#3D0301"
-                    minFontSize={56}
+                    minFontSize={44}
+                    maxFontSize={108}
                     className="font-[family-name:var(--font-display)] leading-tight"
                   />
                 </div>

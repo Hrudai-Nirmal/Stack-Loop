@@ -132,6 +132,8 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-20 10:05 | Added TextPressure effect to the last narrative sentence using existing site font family token | `src/components/ui/text-pressure.tsx`, `src/components/narrative/scroll-narrative.tsx` | `0d5aa9b` | `main` | yes | Kept font family aligned with current UI (`var(--font-display)`), no external font override |
 | 2026-05-20 10:06 | Re-verified lint/build after last-sentence TextPressure integration | Build + lint outputs | `0d5aa9b` | `main` | yes | `pnpm lint` and `pnpm build` passed |
 | 2026-05-20 10:07 | Synced context metadata after TextPressure integration push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
+| 2026-05-20 10:14 | Fixed TextPressure spacing/clipping bug on last narrative sentence | `src/components/ui/text-pressure.tsx`, `src/components/narrative/scroll-narrative.tsx` | pending | `main` | no | Preserved spaces with non-breaking spaces, added max font cap, and tuned sentence-level props to prevent overflow |
+| 2026-05-20 10:15 | Re-verified lint/build after TextPressure bugfix pass | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
