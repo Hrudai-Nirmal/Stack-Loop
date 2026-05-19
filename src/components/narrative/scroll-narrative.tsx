@@ -76,46 +76,21 @@ export function ScrollNarrative() {
     () => process.env.NEXT_PUBLIC_SOCIAL_CTA_URL || "https://www.linkedin.com",
     []
   );
-  const spinnerLayout = useMemo(() => {
-    type SpinnerItem = { left: string; top: string; size: number };
-    const total = 10;
-    const minSize = 300;
-    const maxSize = 500;
-    const minGap = 15;
-    let seed = 73021;
-    const nextRand = () => {
-      seed = (seed * 1664525 + 1013904223) % 4294967296;
-      return seed / 4294967296;
-    };
-
-    const circles: SpinnerItem[] = [];
-    let guard = 0;
-    while (circles.length < total && guard < 1200) {
-      guard += 1;
-      const size = Math.round(minSize + nextRand() * (maxSize - minSize));
-      const left = -10 + nextRand() * 120;
-      const top = 6 + nextRand() * 88;
-
-      const fitsSpacing = circles.every((c) => {
-        const existingLeft = parseFloat(c.left);
-        const existingTop = parseFloat(c.top);
-        const dx = left - existingLeft;
-        const dy = top - existingTop;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        return distance >= minGap;
-      });
-
-      if (fitsSpacing) {
-        circles.push({
-          left: `${left.toFixed(1)}%`,
-          top: `${top.toFixed(1)}%`,
-          size,
-        });
-      }
-    }
-
-    return circles;
-  }, []);
+  const spinnerLayout = useMemo(
+    () => [
+      { left: "-7%", top: "8%", size: 336 },
+      { left: "17%", top: "18%", size: 482 },
+      { left: "29%", top: "39%", size: 314 },
+      { left: "9%", top: "66%", size: 438 },
+      { left: "24%", top: "86%", size: 366 },
+      { left: "71%", top: "12%", size: 401 },
+      { left: "92%", top: "24%", size: 329 },
+      { left: "78%", top: "47%", size: 493 },
+      { left: "104%", top: "71%", size: 352 },
+      { left: "68%", top: "89%", size: 420 },
+    ],
+    []
+  );
 
   useEffect(() => {
     if (!pageRef.current) return;
