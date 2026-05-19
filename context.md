@@ -164,5 +164,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 12:07 | Replaced circle field with a new hand-curated random layout and even directional spacing | `src/components/narrative/scroll-narrative.tsx` | `143639d` | `main` | yes | Refreshed all 10 coordinates/sizes while preserving center gap, 550vh start, and 300-500 size limits |
 
+| 2026-05-20 12:22 | Applied selected generated logo to browser/app icons | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `cd3165e` | `main` | yes | Replaced favicon and added Next App Router `icon.png` + `apple-icon.png` using latest generated logo asset |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
