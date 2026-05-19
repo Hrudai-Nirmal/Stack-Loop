@@ -74,18 +74,27 @@ function InfinityOo() {
       viewBox="0 0 120 54"
       className="oo-infinity mx-[1px] inline-block h-[0.85em] w-[1.45em] align-[-0.06em]"
     >
+      <defs>
+        <marker
+          id="infinity-arrowhead"
+          viewBox="0 0 10 10"
+          refX="8"
+          refY="5"
+          markerWidth="7"
+          markerHeight="7"
+          orient="auto-start-reverse"
+        >
+          <path d="M0,0 L10,5 L0,10 Z" fill="currentColor" />
+        </marker>
+      </defs>
       <path
-        d="M4 27C4 15.954 12.954 7 24 7C35.046 7 43.5 16.5 60 27C76.5 37.5 84.954 47 96 47C107.046 47 116 38.046 116 27C116 15.954 107.046 7 96 7C84.954 7 76.5 16.5 60 27C43.5 37.5 35.046 47 24 47C12.954 47 4 38.046 4 27Z"
+        d="M6 27C6 16.5 14.5 8 25 8C35.5 8 44 17 60 27C76 37 84.5 46 95 46C105.5 46 114 37.5 114 27C114 16.5 105.5 8 95 8C84.5 8 76 17 60 27C44 37 35.5 46 25 46C14.5 46 6 37.5 6 27"
         fill="none"
         stroke="currentColor"
-        strokeWidth="5"
+        strokeWidth="7"
         strokeLinecap="round"
         strokeLinejoin="round"
-      />
-      <path
-        d="M113 27L96 18.5V35.5L113 27Z"
-        className="oo-infinity-arrow"
-        fill="currentColor"
+        markerEnd="url(#infinity-arrowhead)"
       />
     </svg>
   );
