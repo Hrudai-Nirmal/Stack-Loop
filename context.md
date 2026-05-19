@@ -158,5 +158,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 11:43 | Replaced procedural circle generation with curated static 10-circle layout and preserved 20vw center exclusion gap | `src/components/narrative/scroll-narrative.tsx` | `844c4d1` | `main` | yes | Hand-selected random-style placement for easier iterative tuning across future passes |
 
+| 2026-05-20 11:51 | Lowered the circle immediately left of the first card for better composition balance | `src/components/narrative/scroll-narrative.tsx` | `5ee9df9` | `main` | yes | Adjusted curated layout item from `top: 39%` to `top: 46%` |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
