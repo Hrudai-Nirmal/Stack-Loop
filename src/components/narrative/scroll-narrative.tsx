@@ -78,16 +78,16 @@ export function ScrollNarrative() {
   );
   const spinnerLayout = useMemo(
     () => [
-      { left: "-7%", top: "8%", size: 336 },
-      { left: "17%", top: "18%", size: 482 },
-      { left: "29%", top: "62%", size: 314 },
-      { left: "9%", top: "66%", size: 438 },
-      { left: "24%", top: "86%", size: 366 },
-      { left: "71%", top: "12%", size: 401 },
-      { left: "92%", top: "24%", size: 329 },
-      { left: "78%", top: "47%", size: 493 },
-      { left: "104%", top: "71%", size: 352 },
-      { left: "68%", top: "89%", size: 420 },
+      { left: "-6%", top: "10%", size: 348 },
+      { left: "18%", top: "26%", size: 496 },
+      { left: "30%", top: "48%", size: 322 },
+      { left: "8%", top: "70%", size: 452 },
+      { left: "22%", top: "90%", size: 374 },
+      { left: "70%", top: "8%", size: 418 },
+      { left: "94%", top: "28%", size: 337 },
+      { left: "80%", top: "50%", size: 488 },
+      { left: "104%", top: "72%", size: 356 },
+      { left: "66%", top: "90%", size: 429 },
     ],
     []
   );
