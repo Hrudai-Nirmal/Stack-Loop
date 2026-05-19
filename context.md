@@ -126,6 +126,8 @@ After every meaningful project action, the active LLM/agent must update this `co
 | 2026-05-19 14:01 | Refined infinity logo mark: removed bounce, increased stroke weight, and connected arrowhead to loop path | `src/components/narrative/scroll-narrative.tsx`, `src/app/globals.css` | `914b7f6` | `main` | yes | Converted to single marker-ended path so arrow feels like a looping infinity arrow |
 | 2026-05-19 14:02 | Re-verified lint/build after infinity mark refinement | Build + lint outputs | `914b7f6` | `main` | yes | `pnpm lint` and `pnpm build` passed |
 | 2026-05-19 14:03 | Synced context metadata after infinity-mark refinement push | `context.md` | pending | `main` | no | Updated latest commit SHA references |
+| 2026-05-19 14:08 | Reverted header logo back to plain text-only format | `src/components/narrative/scroll-narrative.tsx`, `src/app/globals.css` | pending | `main` | no | Removed infinity SVG usage and leftover logo class styling |
+| 2026-05-19 14:09 | Re-verified lint/build after text-only logo revert | Build + lint outputs | pending | `main` | no | `pnpm lint` and `pnpm build` passed |
 
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.

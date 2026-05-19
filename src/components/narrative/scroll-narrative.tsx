@@ -67,39 +67,6 @@ const narrationLevels = [
   },
 ];
 
-function InfinityOo() {
-  return (
-    <svg
-      aria-hidden
-      viewBox="0 0 120 54"
-      className="oo-infinity mx-[1px] inline-block h-[0.85em] w-[1.45em] align-[-0.06em]"
-    >
-      <defs>
-        <marker
-          id="infinity-arrowhead"
-          viewBox="0 0 10 10"
-          refX="8"
-          refY="5"
-          markerWidth="7"
-          markerHeight="7"
-          orient="auto-start-reverse"
-        >
-          <path d="M0,0 L10,5 L0,10 Z" fill="currentColor" />
-        </marker>
-      </defs>
-      <path
-        d="M6 27C6 16.5 14.5 8 25 8C35.5 8 44 17 60 27C76 37 84.5 46 95 46C105.5 46 114 37.5 114 27C114 16.5 105.5 8 95 8C84.5 8 76 17 60 27C44 37 35.5 46 25 46C14.5 46 6 37.5 6 27"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        markerEnd="url(#infinity-arrowhead)"
-      />
-    </svg>
-  );
-}
-
 export function ScrollNarrative() {
   const pageRef = useRef<HTMLDivElement | null>(null);
   const narrationRef = useRef<HTMLDivElement | null>(null);
@@ -169,9 +136,7 @@ export function ScrollNarrative() {
       <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-[#B6AE9FCC] backdrop-blur-md">
         <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 md:flex-nowrap md:px-8">
           <div className="border-2 border-border bg-[#EABE6C] px-3 py-1 font-[family-name:var(--font-display)] text-xl tracking-tight brutal-shadow sm:text-2xl">
-            Stack&L
-            <InfinityOo />
-            p
+            Stack&Loop
           </div>
           <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm font-medium sm:text-[0.95rem]">
             <a href="#work" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1">
