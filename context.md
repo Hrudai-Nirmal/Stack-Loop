@@ -202,5 +202,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 16:43 | Adjusted narrative vertical position for visual centering with fixed header overlay | `src/components/narrative/scroll-narrative.tsx` | `ab27cc4` | `main` | yes | Added subtle downward offset (`translate-y-6`, desktop `translate-y-7`) to the narration container |
 
+| 2026-05-20 16:52 | Shifted narrative block slightly right for improved perceived horizontal centering | `src/components/narrative/scroll-narrative.tsx` | `3ce1fbf` | `main` | yes | Added `translate-x-[2vw]` to narration container while preserving prior vertical offset |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
