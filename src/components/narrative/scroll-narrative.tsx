@@ -91,6 +91,7 @@ export function ScrollNarrative() {
     ],
     []
   );
+  const reverseSpinIndices = useMemo(() => new Set([1, 3, 5, 7, 9]), []);
 
   useEffect(() => {
     if (!pageRef.current) return;
@@ -219,6 +220,7 @@ export function ScrollNarrative() {
             <CircularText
               text="STACK*AND*LOOP*"
               spinDuration={30}
+              reverse={reverseSpinIndices.has(index)}
               className="!h-full !w-full !text-black !font-black opacity-80"
             />
           </div>
@@ -238,6 +240,7 @@ export function ScrollNarrative() {
             <CircularText
               text="STACK*AND*LOOP*"
               spinDuration={30}
+              reverse={reverseSpinIndices.has(index)}
               className="!h-full !w-full !text-black !font-black opacity-70"
             />
           </div>
