@@ -200,5 +200,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 16:31 | Applied `Screenshot 2026-05-20 042108.png` as transparent max-fill favicon/app icons | `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` | `e6ae352` | `main` | yes | Used exact desktop screenshot source, removed flat background via edge-connected mask, and exported standard favicon sizes `16/32/48` |
 
+| 2026-05-20 16:43 | Adjusted narrative vertical position for visual centering with fixed header overlay | `src/components/narrative/scroll-narrative.tsx` | `ab27cc4` | `main` | yes | Added subtle downward offset (`translate-y-6`, desktop `translate-y-7`) to the narration container |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
