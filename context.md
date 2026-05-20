@@ -204,5 +204,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 16:52 | Shifted narrative block slightly right for improved perceived horizontal centering | `src/components/narrative/scroll-narrative.tsx` | `3ce1fbf` | `main` | yes | Added `translate-x-[2vw]` to narration container while preserving prior vertical offset |
 
+| 2026-05-20 17:08 | Reversed spin direction for 5 of 10 circular background text elements | `src/components/CircularText.tsx`, `src/components/narrative/scroll-narrative.tsx` | `dae959a` | `main` | yes | Added `reverse` prop to circular text animation and applied fixed random subset indices `{1,3,5,7,9}` |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
