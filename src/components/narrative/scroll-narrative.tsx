@@ -181,7 +181,7 @@ export function ScrollNarrative() {
         ref={narrationRef}
         className="relative -mx-4 flex min-h-screen items-center justify-center overflow-hidden px-4 md:-mx-8 md:px-8"
       >
-        <div className="relative h-72 w-full max-w-5xl">
+        <div className="relative h-72 w-full max-w-5xl translate-y-6 md:translate-y-7">
           {narrationLevels.map((level, index) => (
             <div
               key={`narrative-${index}`}
