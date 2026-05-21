@@ -224,5 +224,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-22 10:06 | Applied rounded corners across UI components in narrative experience | `src/components/narrative/contact-form.tsx`, `src/components/narrative/scroll-narrative.tsx`, `src/components/narrative/section-shell.tsx` | `09b3215` | `main` | yes | Replaced hard `rounded-none` overrides with consistent rounded variants for cards, badges, inputs, buttons, and section shells |
 
+| 2026-05-22 10:16 | Added rounded corners to main first/work, services, and contact section containers with requested square exclusions preserved | `src/components/narrative/scroll-narrative.tsx` | `f3c3595` | `main` | yes | Kept header controls, accordion blocks, and first-card right-side box square while rounding primary section shells |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
