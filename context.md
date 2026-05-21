@@ -206,5 +206,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-20 17:08 | Reversed spin direction for 5 of 10 circular background text elements | `src/components/CircularText.tsx`, `src/components/narrative/scroll-narrative.tsx` | `dae959a` | `main` | yes | Added `reverse` prop to circular text animation and applied fixed random subset indices `{1,3,5,7,9}` |
 
+| 2026-05-21 10:44 | Ensured scroll narrative works even with OS/browser Reduce Motion enabled | `src/components/narrative/scroll-narrative.tsx` | `84d51ac` | `main` | yes | Removed early reduced-motion exit and switched to low-motion timeline/section settings so sequence still runs on Mac accessibility mode |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
