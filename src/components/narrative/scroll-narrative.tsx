@@ -251,7 +251,7 @@ export function ScrollNarrative() {
       <section
         id="work"
         data-animate="section"
-        className="relative z-10 mb-12 grid grid-cols-1 gap-6 border-2 border-border bg-card p-6 brutal-shadow lg:grid-cols-[1.2fr_0.8fr] lg:p-10"
+        className="relative z-10 mb-12 grid grid-cols-1 gap-6 rounded-lg border-2 border-border bg-card p-6 brutal-shadow lg:grid-cols-[1.2fr_0.8fr] lg:p-10"
       >
         <div className="order-1 w-full min-w-0 space-y-6">
           <h3 className="mb-2 font-[family-name:var(--font-display)] text-[2.05rem] leading-tight">
@@ -350,7 +350,7 @@ export function ScrollNarrative() {
         ))}
       </div>
 
-      <section id="services" data-animate="section" className="relative z-10 my-12 border-2 border-border bg-card p-6 brutal-shadow md:p-10">
+      <section id="services" data-animate="section" className="relative z-10 my-12 rounded-lg border-2 border-border bg-card p-6 brutal-shadow md:p-10">
         <div className="mb-6 space-y-3">
           <Badge className="rounded-md border-2 border-border bg-primary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-primary-foreground">
             What You Gain
@@ -372,7 +372,7 @@ export function ScrollNarrative() {
         </div>
       </section>
 
-      <section id="contact" data-animate="section" className="relative z-10 my-12 border-2 border-border bg-card p-6 brutal-shadow md:p-10">
+      <section id="contact" data-animate="section" className="relative z-10 my-12 rounded-lg border-2 border-border bg-card p-6 brutal-shadow md:p-10">
         <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="space-y-3">
             <Badge className="rounded-md border-2 border-border bg-secondary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-secondary-foreground">
