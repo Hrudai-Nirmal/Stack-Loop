@@ -97,24 +97,25 @@ export function ScrollNarrative() {
     if (!pageRef.current) return;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     gsap.registerPlugin(ScrollTrigger);
-    if (reducedMotion) return;
 
     const context = gsap.context(() => {
       if (narrationRef.current) {
         const lines = lineRefs.current.filter(Boolean) as HTMLDivElement[];
-        gsap.set(lines, { opacity: 0, y: 24 });
+        gsap.set(lines, { opacity: 0, y: reducedMotion ? 0 : 24 });
         if (lines[0]) {
           gsap.set(lines[0], { opacity: 1, y: 0 });
         }
 
         const introTimeline = gsap.timeline({
-          defaults: { ease: "power2.out" },
+          defaults: { ease: reducedMotion ? "none" : "power2.out" },
           scrollTrigger: {
             trigger: narrationRef.current,
             start: "top top",
             end: `+=${narrationLevels.length * 1000}`,
             scrub: 1,
             pin: true,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
           },
         });
 
@@ -122,21 +123,24 @@ export function ScrollNarrative() {
           const at = index * 1.35;
           introTimeline.fromTo(
             line,
-            { opacity: index === 0 ? 1 : 0, y: index === 0 ? 0 : 24 },
-            { opacity: 1, y: 0, duration: 0.6, immediateRender: false },
+            { opacity: index === 0 ? 1 : 0, y: index === 0 ? 0 : reducedMotion ? 0 : 24 },
+            { opacity: 1, y: 0, duration: reducedMotion ? 0.01 : 0.6, immediateRender: false },
             at
           );
-          introTimeline
-            .to(line, { opacity: 0, y: -24, duration: 0.6 }, at + 0.92);
+          introTimeline.to(
+            line,
+            { opacity: 0, y: reducedMotion ? 0 : -24, duration: reducedMotion ? 0.01 : 0.6 },
+            at + 0.92
+          );
         });
       }
 
       gsap.utils.toArray<HTMLElement>("[data-animate='section']").forEach((el) => {
         gsap.from(el, {
-          y: 30,
+          y: reducedMotion ? 0 : 30,
           opacity: 0,
-          duration: 0.7,
-          ease: "power2.out",
+          duration: reducedMotion ? 0.01 : 0.7,
+          ease: reducedMotion ? "none" : "power2.out",
           scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none reverse" },
         });
       });
