@@ -111,7 +111,7 @@ export function ScrollNarrative() {
           scrollTrigger: {
             trigger: narrationRef.current,
             start: "top top",
-            end: `+=${narrationLevels.length * 1000}`,
+            end: () => `+=${Math.round(window.innerHeight * 0.8 * narrationLevels.length)}`,
             scrub: 1,
             pin: true,
             anticipatePin: 1,
