@@ -78,7 +78,7 @@ export function ScrollNarrative() {
   );
   const spinnerLayout = useMemo(
     () => [
-      { left: "-8%", top: "14%", size: 322 },
+      { left: "calc(-8% + 15vw)", top: "14%", size: 322 },
       { left: "20%", top: "30%", size: 498 },
       { left: "28%", top: "74%", size: 356 },
       { left: "72%", top: "11%", size: 468 },
