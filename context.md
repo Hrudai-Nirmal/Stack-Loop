@@ -210,5 +210,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-21 11:02 | Reduced narrative scroll trigger span from ~100vh/step to 80vh/step | `src/components/narrative/scroll-narrative.tsx` | `89a64ae` | `main` | yes | ScrollTrigger `end` now scales with viewport height: `0.8 * innerHeight * narrationLevels` so post-narrative content appears earlier |
 
+| 2026-05-21 11:19 | Reduced circular text background to 7 elements and moved start point to 380vh | `src/components/narrative/scroll-narrative.tsx` | `9fd37fc` | `main` | yes | Replaced 10-item layout with 7 random-style placements and mixed lower/higher size range (~300-500px) |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
