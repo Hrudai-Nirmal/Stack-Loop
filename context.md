@@ -212,5 +212,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-21 11:19 | Reduced circular text background to 7 elements and moved start point to 380vh | `src/components/narrative/scroll-narrative.tsx` | `9fd37fc` | `main` | yes | Replaced 10-item layout with 7 random-style placements and mixed lower/higher size range (~300-500px) |
 
+| 2026-05-21 11:27 | Shifted the leftmost circular text element 15vw to the right | `src/components/narrative/scroll-narrative.tsx` | `4870782` | `main` | yes | Updated first circle `left` to `calc(-8% + 15vw)` for responsive horizontal offset |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
