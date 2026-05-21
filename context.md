@@ -220,5 +220,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-21 11:53 | Shifted the topmost circular text element 15vw to the right | `src/components/narrative/scroll-narrative.tsx` | `5cafebe` | `main` | yes | Updated target circle left from `calc(28% - 10vw)` to `calc(28% + 5vw)` while keeping elevated top position |
 
+| 2026-05-21 21:39 | Reverted the previous topmost-circle right shift to restore prior layout | `src/components/narrative/scroll-narrative.tsx` | `328d616` | `main` | yes | Reverted commit `5cafebe`; topmost circle position returned to pre-shift coordinates |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
