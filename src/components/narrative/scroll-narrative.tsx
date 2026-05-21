@@ -78,16 +78,13 @@ export function ScrollNarrative() {
   );
   const spinnerLayout = useMemo(
     () => [
-      { left: "-6%", top: "10%", size: 348 },
-      { left: "18%", top: "26%", size: 496 },
-      { left: "30%", top: "48%", size: 322 },
-      { left: "8%", top: "70%", size: 452 },
-      { left: "22%", top: "90%", size: 374 },
-      { left: "70%", top: "8%", size: 418 },
-      { left: "94%", top: "28%", size: 337 },
-      { left: "80%", top: "50%", size: 488 },
-      { left: "104%", top: "72%", size: 356 },
-      { left: "66%", top: "90%", size: 429 },
+      { left: "-8%", top: "14%", size: 322 },
+      { left: "20%", top: "30%", size: 498 },
+      { left: "28%", top: "74%", size: 356 },
+      { left: "72%", top: "11%", size: 468 },
+      { left: "90%", top: "42%", size: 311 },
+      { left: "80%", top: "83%", size: 500 },
+      { left: "104%", top: "63%", size: 339 },
     ],
     []
   );
@@ -208,7 +205,7 @@ export function ScrollNarrative() {
         </div>
       </section>
 
-      <div className="pointer-events-none absolute bottom-0 left-1/2 top-[550vh] z-[1] w-screen -translate-x-1/2 overflow-hidden">
+      <div className="pointer-events-none absolute bottom-0 left-1/2 top-[380vh] z-[1] w-screen -translate-x-1/2 overflow-hidden">
         {spinnerLayout.map((item, index) => (
           <div
             key={`spin-${index}`}
