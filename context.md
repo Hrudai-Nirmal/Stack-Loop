@@ -214,5 +214,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-21 11:27 | Shifted the leftmost circular text element 15vw to the right | `src/components/narrative/scroll-narrative.tsx` | `4870782` | `main` | yes | Updated first circle `left` to `calc(-8% + 15vw)` for responsive horizontal offset |
 
+| 2026-05-21 11:35 | Repositioned the 2nd-from-bottom circular text element upward and leftward | `src/components/narrative/scroll-narrative.tsx` | `86953d6` | `main` | yes | Updated target circle to `left: calc(28% - 10vw)` and `top: calc(74% - 50vh)` |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
