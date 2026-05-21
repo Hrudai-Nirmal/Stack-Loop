@@ -218,5 +218,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-21 11:44 | Moved the previously adjusted circle 15vh higher and reversed its rotation | `src/components/narrative/scroll-narrative.tsx` | `966c6cb` | `main` | yes | Updated circle top to `calc(74% - 65vh)` and added index `2` to reverse spin subset |
 
+| 2026-05-21 11:53 | Shifted the topmost circular text element 15vw to the right | `src/components/narrative/scroll-narrative.tsx` | `5cafebe` | `main` | yes | Updated target circle left from `calc(28% - 10vw)` to `calc(28% + 5vw)` while keeping elevated top position |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
