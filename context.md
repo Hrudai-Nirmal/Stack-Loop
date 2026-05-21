@@ -208,5 +208,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-21 10:44 | Ensured scroll narrative works even with OS/browser Reduce Motion enabled | `src/components/narrative/scroll-narrative.tsx` | `84d51ac` | `main` | yes | Removed early reduced-motion exit and switched to low-motion timeline/section settings so sequence still runs on Mac accessibility mode |
 
+| 2026-05-21 11:02 | Reduced narrative scroll trigger span from ~100vh/step to 80vh/step | `src/components/narrative/scroll-narrative.tsx` | `89a64ae` | `main` | yes | ScrollTrigger `end` now scales with viewport height: `0.8 * innerHeight * narrationLevels` so post-narrative content appears earlier |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
