@@ -222,5 +222,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-21 21:39 | Reverted the previous topmost-circle right shift to restore prior layout | `src/components/narrative/scroll-narrative.tsx` | `328d616` | `main` | yes | Reverted commit `5cafebe`; topmost circle position returned to pre-shift coordinates |
 
+| 2026-05-22 10:06 | Applied rounded corners across UI components in narrative experience | `src/components/narrative/contact-form.tsx`, `src/components/narrative/scroll-narrative.tsx`, `src/components/narrative/section-shell.tsx` | `09b3215` | `main` | yes | Replaced hard `rounded-none` overrides with consistent rounded variants for cards, badges, inputs, buttons, and section shells |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
