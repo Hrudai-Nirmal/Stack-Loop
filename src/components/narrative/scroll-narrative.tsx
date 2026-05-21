@@ -80,7 +80,7 @@ export function ScrollNarrative() {
     () => [
       { left: "calc(-8% + 15vw)", top: "14%", size: 322 },
       { left: "20%", top: "30%", size: 498 },
-      { left: "calc(28% - 10vw)", top: "calc(74% - 50vh)", size: 356 },
+      { left: "calc(28% - 10vw)", top: "calc(74% - 65vh)", size: 356 },
       { left: "72%", top: "11%", size: 468 },
       { left: "90%", top: "42%", size: 311 },
       { left: "80%", top: "83%", size: 500 },
@@ -88,7 +88,7 @@ export function ScrollNarrative() {
     ],
     []
   );
-  const reverseSpinIndices = useMemo(() => new Set([1, 3, 5, 7, 9]), []);
+  const reverseSpinIndices = useMemo(() => new Set([1, 2, 3, 5]), []);
 
   useEffect(() => {
     if (!pageRef.current) return;
