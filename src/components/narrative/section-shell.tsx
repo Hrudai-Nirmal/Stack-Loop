@@ -34,7 +34,7 @@ export function SectionShell({
         <Badge
           variant="secondary"
           className={cn(
-            "rounded-none border-2 border-border px-3 py-1 text-[11px] uppercase tracking-[0.14em]",
+            "rounded-md border-2 border-border px-3 py-1 text-[11px] uppercase tracking-[0.14em]",
             badgeClassName
           )}
         >

@@ -313,7 +313,7 @@ export function ScrollNarrative() {
           </div>
         </div>
         <div className="order-2 w-full min-w-0 space-y-6 border-2 border-border bg-background p-5">
-          <Badge className="max-w-full whitespace-normal rounded-none border-2 border-border bg-secondary px-3 py-1 text-[11px] leading-tight uppercase tracking-[0.14em] text-secondary-foreground sm:whitespace-nowrap">
+          <Badge className="max-w-full whitespace-normal rounded-md border-2 border-border bg-secondary px-3 py-1 text-[11px] leading-tight uppercase tracking-[0.14em] text-secondary-foreground sm:whitespace-nowrap">
             {heroCopy.eyebrow}
           </Badge>
           <h1 className="max-w-3xl font-[family-name:var(--font-display)] text-4xl leading-[1.03] md:text-5xl">
@@ -322,7 +322,7 @@ export function ScrollNarrative() {
           <p className="max-w-2xl text-xl leading-9 text-muted-foreground">{heroCopy.subtext}</p>
           <div className="flex flex-wrap gap-2">
             {heroCopy.chips.map((chip) => (
-              <Badge key={chip} variant="outline" className="rounded-none border-2 border-border bg-card px-3 py-1 text-xs uppercase tracking-[0.1em]">
+              <Badge key={chip} variant="outline" className="rounded-md border-2 border-border bg-card px-3 py-1 text-xs uppercase tracking-[0.1em]">
                 {chip}
               </Badge>
             ))}
@@ -338,7 +338,7 @@ export function ScrollNarrative() {
             eyebrow={section.eyebrow}
             title={section.title}
             content={section.content}
-            className="rounded-none border-2"
+            className="rounded-lg border-2"
             badgeClassName={
               section.id === "pain"
                 ? "!bg-[#E14434] !text-[#3D0301]"
@@ -352,14 +352,14 @@ export function ScrollNarrative() {
 
       <section id="services" data-animate="section" className="relative z-10 my-12 border-2 border-border bg-card p-6 brutal-shadow md:p-10">
         <div className="mb-6 space-y-3">
-          <Badge className="rounded-none border-2 border-border bg-primary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-primary-foreground">
+          <Badge className="rounded-md border-2 border-border bg-primary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-primary-foreground">
             What You Gain
           </Badge>
           <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl">Operational calm with better decision velocity.</h2>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           {valueCards.map(({ detail, icon: Icon, title }) => (
-            <Card key={title} className="rounded-none border-2 border-border bg-background">
+            <Card key={title} className="rounded-lg border-2 border-border bg-background">
               <CardHeader className="border-b-2 border-border">
                 <CardTitle className="flex items-center gap-2 text-xl">
                   <Icon className="size-5" />
@@ -375,12 +375,12 @@ export function ScrollNarrative() {
       <section id="contact" data-animate="section" className="relative z-10 my-12 border-2 border-border bg-card p-6 brutal-shadow md:p-10">
         <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="space-y-3">
-            <Badge className="rounded-none border-2 border-border bg-secondary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-secondary-foreground">
+            <Badge className="rounded-md border-2 border-border bg-secondary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-secondary-foreground">
               Contact
             </Badge>
             <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl">Let&apos;s remove one expensive bottleneck this month.</h2>
           </div>
-          <a href={socialUrl} target="_blank" rel="noreferrer" className={cn(buttonVariants({ variant: "outline" }), "h-11 rounded-none border-2 border-border bg-background px-5 text-xs font-semibold uppercase tracking-[0.12em]")}>
+          <a href={socialUrl} target="_blank" rel="noreferrer" className={cn(buttonVariants({ variant: "outline" }), "h-11 rounded-md border-2 border-border bg-background px-5 text-xs font-semibold uppercase tracking-[0.12em]")}>
             DM on Social
             <ArrowRight className="size-4" />
           </a>

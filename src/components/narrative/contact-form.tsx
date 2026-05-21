@@ -82,7 +82,7 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="rounded-none border-2 border-border bg-background">
+    <Card className="rounded-lg border-2 border-border bg-background">
       <CardHeader className="border-b-2 border-border">
         <CardTitle className="font-[family-name:var(--font-display)] text-2xl">
           Tell me what is breaking your workflow.
@@ -105,7 +105,7 @@ export function ContactForm() {
                   }))
                 }
                 required
-                className="h-11 rounded-none border border-border"
+                className="h-11 rounded-md border border-border"
                 placeholder="Your name"
               />
             </div>
@@ -124,7 +124,7 @@ export function ContactForm() {
                   }))
                 }
                 required
-                className="h-11 rounded-none border border-border"
+                className="h-11 rounded-md border border-border"
                 placeholder="you@company.com"
               />
             </div>
@@ -143,7 +143,7 @@ export function ContactForm() {
                   company: event.target.value,
                 }))
               }
-              className="h-11 rounded-none border border-border"
+              className="h-11 rounded-md border border-border"
               placeholder="Company name"
             />
           </div>
@@ -162,7 +162,7 @@ export function ContactForm() {
                 }))
               }
               required
-              className="min-h-40 rounded-none border border-border"
+              className="min-h-40 rounded-md border border-border"
               placeholder="Describe your biggest bottleneck and current tool stack."
             />
           </div>
@@ -186,7 +186,7 @@ export function ContactForm() {
           <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
             <Button
               type="submit"
-              className="h-11 rounded-none border-2 border-border bg-primary px-5 text-sm font-semibold uppercase tracking-[0.1em]"
+              className="h-11 rounded-md border-2 border-border bg-primary px-5 text-sm font-semibold uppercase tracking-[0.1em]"
               disabled={!canSubmit || submitState === "sending"}
             >
               {submitState === "sending" ? (
