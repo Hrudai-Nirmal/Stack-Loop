@@ -21,7 +21,7 @@ export function SiteHeader({ activeTab, homeAnchors = false }: SiteHeaderProps) 
   const tabClass = (tab: HeaderTab) =>
     cn(
       "border-2 border-border px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1",
-      activeTab === tab ? "bg-[#B03052] text-[#FFEDD8]" : "bg-[#EABE6C] text-foreground"
+      activeTab === tab ? "bg-[#B03052] text-[#EBE8DB]" : "bg-[#EABE6C] text-foreground"
     );
 
   return (
@@ -85,3 +85,5 @@ export function SiteHeader({ activeTab, homeAnchors = false }: SiteHeaderProps) 
     </>
   );
 }
+
+
