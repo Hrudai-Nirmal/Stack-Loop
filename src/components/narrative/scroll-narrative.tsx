@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useRef } from "react";
 import { ArrowRight, Bot, ChartNoAxesCombined, CircleUserRound, Workflow } from "lucide-react";
 import gsap from "gsap";
@@ -163,9 +164,9 @@ export function ScrollNarrative() {
             <a href="#work" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1">
               Work
             </a>
-            <a href="#services" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1">
+            <Link href="/services" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1">
               Services
-            </a>
+            </Link>
             <a href="#about" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1">
               About
             </a>
