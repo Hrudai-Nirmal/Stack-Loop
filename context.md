@@ -230,5 +230,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-22 10:57 | Implemented Services Page v2 with benefit-first SMB copy, pricing section, and INR-default currency toggle | `src/app/services/page.tsx` | `3889ccc` | `main` | yes | Added sections: Hero, Pain Points, Packages, Pricing (`USD/INR` toggle @ fixed 84x), How It Works, FAQs, and compact delivery stack; primary CTA routes to `/#contact` |
 
+| 2026-05-22 11:12 | Unified header across Home/Services/Pricing, added dedicated `/pricing` page, and removed pricing module from `/services` | `src/components/site-header.tsx`, `src/components/narrative/scroll-narrative.tsx`, `src/app/services/page.tsx`, `src/app/pricing/page.tsx` | `a437ab3` | `main` | yes | Active page tab now uses `#B03052`; header now includes Pricing beside Services; landing/home treated as About context with shared nav |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
