@@ -8,32 +8,33 @@ import { SiteHeader } from "@/components/site-header";
 
 type Currency = "USD" | "INR";
 
-const USD_TO_INR = 84;
-
 const pricingPackages = [
   {
     tier: "Tier 1",
     title: "The Automation Blueprint",
-    rangeUSD: { min: 500, max: 950 },
+    rangeUSD: { min: 100, max: 200 },
+    rangeINR: { min: 8000, max: 15000 },
     detail: "Discovery and roadmap package for identifying your fastest automation wins.",
   },
   {
     tier: "Tier 2",
     title: "The Core Automation Build",
-    rangeUSD: { min: 1500, max: 3500 },
+    rangeUSD: { min: 700, max: 1000 },
+    rangeINR: { min: 45000, max: 80000 },
     detail: "One focused workflow built and deployed end-to-end with handoff support.",
   },
   {
     tier: "Tier 3",
     title: "Continuous Care & Optimization",
     rangeUSD: null,
+    rangeINR: null,
     detail: "Placeholder for maintenance and retainer support after initial build phases.",
   },
 ] as const;
 
-function formatAmount(amountUsd: number, currency: Currency) {
-  if (currency === "USD") return `$${amountUsd.toLocaleString("en-US")}`;
-  return `₹${(amountUsd * USD_TO_INR).toLocaleString("en-IN")}`;
+function formatAmount(amount: number, currency: Currency) {
+  if (currency === "USD") return `$${amount.toLocaleString("en-US")}`;
+  return `₹${amount.toLocaleString("en-IN")}`;
 }
 
 export default function PricingPage() {
@@ -41,7 +42,7 @@ export default function PricingPage() {
 
   const conversionNote = useMemo(() => {
     if (currency === "USD") return "All prices shown in USD.";
-    return `All prices shown in INR using fixed conversion: 1 USD = ${USD_TO_INR} INR.`;
+    return "All prices shown in INR.";
   }, [currency]);
 
   return (
@@ -103,7 +104,9 @@ export default function PricingPage() {
               </h2>
               {pkg.rangeUSD ? (
                 <p className="mt-4 text-3xl font-semibold">
-                  {formatAmount(pkg.rangeUSD.min, currency)} - {formatAmount(pkg.rangeUSD.max, currency)}
+                  {currency === "USD"
+                    ? `${formatAmount(pkg.rangeUSD.min, "USD")} - ${formatAmount(pkg.rangeUSD.max, "USD")}`
+                    : `${formatAmount(pkg.rangeINR!.min, "INR")} - ${formatAmount(pkg.rangeINR!.max, "INR")}`}
                 </p>
               ) : (
                 <p className="mt-4 rounded-md border-2 border-dashed border-border bg-background px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">

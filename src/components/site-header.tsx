@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 import { CircleUserRound } from "lucide-react";
 
+import { ContactForm } from "@/components/narrative/contact-form";
 import { cn } from "@/lib/utils";
 
 type HeaderTab = "services" | "pricing" | "about";
@@ -12,6 +16,7 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ activeTab, homeAnchors = false }: SiteHeaderProps) {
   const contactHref = homeAnchors ? "#contact" : "/#contact";
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   const tabClass = (tab: HeaderTab) =>
     cn(
@@ -43,9 +48,13 @@ export function SiteHeader({ activeTab, homeAnchors = false }: SiteHeaderProps) 
           <Link href="/" className={tabClass("about")}>
             About
           </Link>
-          <Link href={contactHref} className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1">
+          <button
+            type="button"
+            onClick={() => setIsContactOpen(true)}
+            className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1"
+          >
             Contact
-          </Link>
+          </button>
         </div>
         <Link
           href={contactHref}
@@ -54,6 +63,20 @@ export function SiteHeader({ activeTab, homeAnchors = false }: SiteHeaderProps) 
           Start Automating
         </Link>
       </div>
+      {isContactOpen ? (
+        <div className="fixed inset-0 z-[70] flex items-center justify-center bg-black/40 p-4">
+          <div className="relative max-h-[92vh] w-full max-w-2xl overflow-auto rounded-lg border-2 border-border bg-background p-5 brutal-shadow md:p-6">
+            <button
+              type="button"
+              onClick={() => setIsContactOpen(false)}
+              className="absolute right-3 top-3 rounded-md border-2 border-border bg-[#EABE6C] px-2 py-1 text-xs font-semibold uppercase tracking-[0.12em] brutal-shadow"
+            >
+              Close
+            </button>
+            <ContactForm />
+          </div>
+        </div>
+      ) : null}
     </header>
   );
 }
