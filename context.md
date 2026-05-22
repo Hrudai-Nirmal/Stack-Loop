@@ -236,5 +236,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-22 11:35 | Repositioned shared header to use screen edges with empty center and refined CTA hover styling | `src/components/site-header.tsx` | `f1b578c` | `main` | yes | Nav cluster pushed right, avatar/logo nudged right, CTA pinned on right edge; removed CTA rise/shadow and switched to highlight-on-hover |
 
+| 2026-05-22 11:47 | Updated package pricing ranges and added header-contact modal dialog using existing contact form setup | `src/app/pricing/page.tsx`, `src/components/site-header.tsx` | `551f50a` | `main` | yes | Pricing set to Tier1 `$100-$200` / `?8,000-?15,000`, Tier2 `$700-$1,000` / `?45,000-?80,000`; Contact header button now opens overlay modal with `ContactForm` |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
