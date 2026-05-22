@@ -228,5 +228,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-22 10:36 | Built dedicated `/services` page with Tier 1+2 detail, Tier 3 placeholder, and full tooling stack narrative | `src/app/services/page.tsx`, `src/components/narrative/scroll-narrative.tsx` | `77cd005` | `main` | yes | Added services route sections for offers + tooling categories; updated home header Services nav to link `/services` |
 
+| 2026-05-22 10:57 | Implemented Services Page v2 with benefit-first SMB copy, pricing section, and INR-default currency toggle | `src/app/services/page.tsx` | `3889ccc` | `main` | yes | Added sections: Hero, Pain Points, Packages, Pricing (`USD/INR` toggle @ fixed 84x), How It Works, FAQs, and compact delivery stack; primary CTA routes to `/#contact` |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
