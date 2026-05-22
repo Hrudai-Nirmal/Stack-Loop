@@ -234,5 +234,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-22 11:27 | Refined shared header: removed Work, moved avatar left of logo, and added full-height Start Automating CTA on right edge | `src/components/site-header.tsx` | `42c39f0` | `main` | yes | CTA uses same green tone as what-changes badge (`#7FBF7F`) and routes to contact anchor; header remains shared across all pages |
 
+| 2026-05-22 11:35 | Repositioned shared header to use screen edges with empty center and refined CTA hover styling | `src/components/site-header.tsx` | `f1b578c` | `main` | yes | Nav cluster pushed right, avatar/logo nudged right, CTA pinned on right edge; removed CTA rise/shadow and switched to highlight-on-hover |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
