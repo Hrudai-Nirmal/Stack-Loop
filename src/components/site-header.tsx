@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { CircleUserRound } from "lucide-react";
+import { ArrowRight, CircleUserRound } from "lucide-react";
 
 import { ContactForm } from "@/components/narrative/contact-form";
 import { cn } from "@/lib/utils";
@@ -62,7 +62,7 @@ export function SiteHeader({ activeTab, homeAnchors = false }: SiteHeaderProps) 
           className="inline-flex items-center gap-2 self-stretch border-2 border-border bg-[#EABE6C] px-5 text-sm font-semibold uppercase tracking-[0.12em] text-foreground transition-colors duration-200 hover:bg-[#B03052] hover:text-[#FFEDD8]"
         >
           <span>START AUTOMATING</span>
-          <span className="cta-arrow inline-block">-&gt;</span>
+          <ArrowRight className="cta-arrow size-4" />
         </Link>
         </div>
       </header>
