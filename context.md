@@ -246,8 +246,11 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-22 19:34 | Synced context metadata after palette swap | `context.md` | `b1af305` | `main` | yes | Added missing log entry for the context-sync commit after color-token swap |
 
+| 2026-05-22 19:41 | Reverted prior active-token swap between #EBE8DB and #FFEDD8 | src/app/globals.css, src/components/site-header.tsx | 102b55b | main | yes | Restored pre-swap colors: background/foreground tokens and active header-tab text now back to #FFEDD8 |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
+
 
 
 
