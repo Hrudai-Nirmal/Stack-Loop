@@ -1,14 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-type Currency = "USD" | "INR";
-
-const USD_TO_INR = 84;
+import { SiteHeader } from "@/components/site-header";
 
 const packageData = [
   {
@@ -24,7 +20,6 @@ const packageData = [
       "60-minute strategy workshop",
       "Custom roadmap showing where automation will save the most hours",
     ],
-    pricingUSD: { min: 500, max: 950 },
     status: "active",
   },
   {
@@ -40,7 +35,6 @@ const packageData = [
       "End-to-end build, QA, and launch",
       "Loom handoff walkthrough + basic SOP for team usage",
     ],
-    pricingUSD: { min: 1500, max: 3500 },
     status: "active",
   },
   {
@@ -51,7 +45,6 @@ const packageData = [
       "Daily error monitoring, prompt fine-tuning, and dedicated technical maintenance to ensure your AI workflows run flawlessly.",
     whoItsFor: "Reserved for growth-stage teams after initial deployments are live and stable.",
     includes: ["Ongoing monitoring", "Priority fixes", "Continuous optimization"],
-    pricingUSD: null,
     status: "placeholder",
   },
 ] as const;
@@ -106,55 +99,12 @@ const toolingCompact = [
   "Loom + Notion + Miro/Whimsical (handoff, docs, process visibility)",
 ];
 
-function formatAmount(amountUsd: number, currency: Currency) {
-  if (currency === "USD") {
-    return `$${amountUsd.toLocaleString("en-US")}`;
-  }
-  return `₹${(amountUsd * USD_TO_INR).toLocaleString("en-IN")}`;
-}
-
 export default function ServicesPage() {
-  const [currency, setCurrency] = useState<Currency>("INR");
-
-  const pricingLabel = useMemo(() => {
-    if (currency === "USD") return "All ranges in USD.";
-    return `All ranges in INR (converted at fixed rate: 1 USD = ${USD_TO_INR} INR).`;
-  }, [currency]);
-
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <header className="sticky top-0 z-40 border-b-2 border-border bg-[#B6AE9FCC] backdrop-blur-md">
-        <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 md:flex-nowrap md:px-8">
-          <Link
-            href="/"
-            className="border-2 border-border bg-[#EABE6C] px-3 py-1 font-[family-name:var(--font-display)] text-xl tracking-tight brutal-shadow sm:text-2xl"
-          >
-            Stack&Loop
-          </Link>
-          <nav className="flex items-center gap-3 text-sm font-medium sm:text-[0.95rem]">
-            <a
-              href="#packages"
-              className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1"
-            >
-              Packages
-            </a>
-            <a
-              href="#pricing"
-              className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1"
-            >
-              Pricing
-            </a>
-            <a
-              href="#faq"
-              className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1"
-            >
-              FAQ
-            </a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader activeTab="services" />
 
-      <section className="mx-auto w-full max-w-7xl px-4 pb-10 pt-10 md:px-8 md:pt-14">
+      <section className="mx-auto w-full max-w-7xl px-4 pb-10 pt-28 md:px-8 md:pt-30">
         <div className="rounded-lg border-2 border-border bg-card p-7 brutal-shadow md:p-10">
           <Badge className="rounded-md border-2 border-border bg-secondary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-secondary-foreground">
             Services
@@ -232,60 +182,6 @@ export default function ServicesPage() {
               </CardContent>
             </Card>
           ))}
-        </div>
-      </section>
-
-      <section id="pricing" className="mx-auto w-full max-w-7xl px-4 pb-10 md:px-8">
-        <div className="rounded-lg border-2 border-border bg-card p-6 brutal-shadow md:p-8">
-          <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-            <Badge className="rounded-md border-2 border-border bg-primary px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-primary-foreground">
-              Pricing
-            </Badge>
-            <div className="inline-flex rounded-md border-2 border-border bg-background p-1">
-              <button
-                type="button"
-                onClick={() => setCurrency("USD")}
-                className={`rounded-md px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] ${
-                  currency === "USD" ? "bg-[#EABE6C] text-[#3D0301]" : "text-muted-foreground"
-                }`}
-              >
-                USD
-              </button>
-              <button
-                type="button"
-                onClick={() => setCurrency("INR")}
-                className={`rounded-md px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] ${
-                  currency === "INR" ? "bg-[#EABE6C] text-[#3D0301]" : "text-muted-foreground"
-                }`}
-              >
-                INR
-              </button>
-            </div>
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-2">
-            {packageData
-              .filter((pkg) => pkg.pricingUSD)
-              .map((pkg) => (
-                <div key={pkg.tier} className="rounded-lg border-2 border-border bg-background p-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
-                    {pkg.tier}
-                  </p>
-                  <h3 className="mt-1 font-[family-name:var(--font-display)] text-2xl leading-tight">
-                    {pkg.title}
-                  </h3>
-                  <p className="mt-3 text-2xl font-semibold text-foreground">
-                    {formatAmount(pkg.pricingUSD!.min, currency)} -{" "}
-                    {formatAmount(pkg.pricingUSD!.max, currency)}
-                  </p>
-                </div>
-              ))}
-          </div>
-          <p className="mt-4 text-xs uppercase tracking-[0.12em] text-muted-foreground">{pricingLabel}</p>
-          <p className="mt-2 text-sm leading-7 text-muted-foreground">
-            Final pricing depends on workflow complexity and integrations. You own all software accounts and
-            billing directly.
-          </p>
         </div>
       </section>
 

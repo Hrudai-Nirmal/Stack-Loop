@@ -1,13 +1,13 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useMemo, useRef } from "react";
-import { ArrowRight, Bot, ChartNoAxesCombined, CircleUserRound, Workflow } from "lucide-react";
+import { ArrowRight, Bot, ChartNoAxesCombined, Workflow } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { ContactForm } from "@/components/narrative/contact-form";
 import { SectionShell } from "@/components/narrative/section-shell";
+import { SiteHeader } from "@/components/site-header";
 import CircularText from "@/components/CircularText";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
@@ -155,30 +155,7 @@ export function ScrollNarrative() {
       ref={pageRef}
       className="relative mx-auto w-full max-w-7xl px-4 pb-8 md:px-8 md:pb-10"
     >
-      <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-[#B6AE9FCC] backdrop-blur-md">
-        <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 md:flex-nowrap md:px-8">
-          <div className="border-2 border-border bg-[#EABE6C] px-3 py-1 font-[family-name:var(--font-display)] text-xl tracking-tight brutal-shadow sm:text-2xl">
-            Stack&Loop
-          </div>
-          <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm font-medium sm:text-[0.95rem]">
-            <a href="#work" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1">
-              Work
-            </a>
-            <Link href="/services" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1">
-              Services
-            </Link>
-            <a href="#about" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1">
-              About
-            </a>
-            <a href="#contact" className="border-2 border-border bg-[#EABE6C] px-2 py-1 brutal-shadow transition-transform duration-200 hover:-translate-y-1">
-              Contact
-            </a>
-            <div className="flex size-10 items-center justify-center rounded-[999px] border-2 border-border bg-[#EABE6C] brutal-shadow">
-              <CircleUserRound className="size-5" />
-            </div>
-          </div>
-        </div>
-      </header>
+      <SiteHeader activeTab="about" homeAnchors />
 
       <section
         ref={narrationRef}
