@@ -248,8 +248,11 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-22 19:41 | Reverted prior active-token swap between #EBE8DB and #FFEDD8 | src/app/globals.css, src/components/site-header.tsx | 102b55b | main | yes | Restored pre-swap colors: background/foreground tokens and active header-tab text now back to #FFEDD8 |
 
+| 2026-05-22 19:44 | Updated header Start Automating CTA styling and behavior, plus corrected label typo | src/components/site-header.tsx | 26591ad | main | yes | CTA now uses yellow base, hover #B03052, no highlight effect, text START AUTOMATING ->, and arrow poke animation every 5s |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
+
 
 
 
