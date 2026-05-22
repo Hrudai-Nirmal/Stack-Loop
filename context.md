@@ -250,8 +250,11 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-22 19:44 | Updated header Start Automating CTA styling and behavior, plus corrected label typo | src/components/site-header.tsx | 26591ad | main | yes | CTA now uses yellow base, hover #B03052, no highlight effect, text START AUTOMATING ->, and arrow poke animation every 5s |
 
+| 2026-05-22 19:46 | Replaced CTA arrow text with icon while preserving poke animation | src/components/site-header.tsx | 443cd43 | main | yes | Swapped -> text for ArrowRight icon in Start Automating button and kept 5s forward-poke motion |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
+
 
 
 
