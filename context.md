@@ -240,6 +240,9 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-22 19:24 | Fixed header contact dialog clipping and behavior: centered, larger, explicit X close, no outside-click dismiss | src/components/site-header.tsx | 3494216 | main | yes | Moved modal outside header container to avoid clipping and switched to viewport-centered layout (56rem max width, 88vh max height) with fixed overlay |
 
+| 2026-05-22 19:32 | Swapped #EBE8DB and #FFEDD8 in active UI styling tokens | src/app/globals.css, src/components/site-header.tsx | c98815 | main | yes | Updated global foreground/background token usage and active header-tab text color per palette swap request |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
+
 
