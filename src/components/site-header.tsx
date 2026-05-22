@@ -59,12 +59,30 @@ export function SiteHeader({ activeTab, homeAnchors = false }: SiteHeaderProps) 
         </div>
         <Link
           href={contactHref}
-          className="inline-flex items-center self-stretch border-2 border-border bg-[#7FBF7F] px-5 text-sm font-semibold uppercase tracking-[0.12em] text-[#123015] transition-colors duration-200 hover:bg-[#9BD59B] hover:text-[#0F2F0F]"
+          className="inline-flex items-center gap-2 self-stretch border-2 border-border bg-[#EABE6C] px-5 text-sm font-semibold uppercase tracking-[0.12em] text-foreground transition-colors duration-200 hover:bg-[#B03052] hover:text-[#FFEDD8]"
         >
-          Start Automating
+          <span>START AUTOMATING</span>
+          <span className="cta-arrow inline-block">-&gt;</span>
         </Link>
         </div>
       </header>
+      <style jsx>{`
+        .cta-arrow {
+          animation: arrowPoke 5s ease-in-out infinite;
+          will-change: transform;
+        }
+
+        @keyframes arrowPoke {
+          0%,
+          84%,
+          100% {
+            transform: translateX(0);
+          }
+          90% {
+            transform: translateX(7px);
+          }
+        }
+      `}</style>
       {isContactOpen ? (
         <div className="fixed inset-0 z-[80] bg-black/45">
           <div className="absolute left-1/2 top-1/2 w-[min(96vw,56rem)] -translate-x-1/2 -translate-y-1/2">
@@ -85,6 +103,7 @@ export function SiteHeader({ activeTab, homeAnchors = false }: SiteHeaderProps) 
     </>
   );
 }
+
 
 
 
