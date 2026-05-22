@@ -21,8 +21,8 @@ export function SiteHeader({ activeTab, homeAnchors = false }: SiteHeaderProps) 
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-[#B6AE9FCC] backdrop-blur-md">
-      <div className="mx-auto flex h-16 w-full max-w-7xl items-stretch justify-between gap-3 px-4 md:px-8">
-        <div className="flex items-center gap-3">
+      <div className="flex h-16 w-full items-stretch pl-4 pr-0 md:pl-8">
+        <div className="ml-3 flex items-center gap-3 md:ml-5">
           <div className="flex size-10 items-center justify-center rounded-[999px] border-2 border-border bg-[#EABE6C] brutal-shadow">
             <CircleUserRound className="size-5" />
           </div>
@@ -33,7 +33,7 @@ export function SiteHeader({ activeTab, homeAnchors = false }: SiteHeaderProps) 
             Stack&Loop
           </Link>
         </div>
-        <div className="flex items-center gap-3 text-sm font-medium sm:text-[0.95rem]">
+        <div className="ml-auto mr-4 flex items-center gap-3 text-sm font-medium sm:text-[0.95rem] md:mr-8">
           <Link href="/services" className={tabClass("services")}>
             Services
           </Link>
@@ -49,7 +49,7 @@ export function SiteHeader({ activeTab, homeAnchors = false }: SiteHeaderProps) 
         </div>
         <Link
           href={contactHref}
-          className="inline-flex items-center self-stretch border-2 border-border bg-[#7FBF7F] px-5 text-sm font-semibold uppercase tracking-[0.12em] text-[#123015] brutal-shadow transition-transform duration-200 hover:-translate-y-1"
+          className="inline-flex items-center self-stretch border-2 border-border bg-[#7FBF7F] px-5 text-sm font-semibold uppercase tracking-[0.12em] text-[#123015] transition-colors duration-200 hover:bg-[#9BD59B] hover:text-[#0F2F0F]"
         >
           Start Automating
         </Link>
