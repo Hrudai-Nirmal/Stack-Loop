@@ -226,5 +226,7 @@ After every meaningful project action, the active LLM/agent must update this `co
 
 | 2026-05-22 10:16 | Added rounded corners to main first/work, services, and contact section containers with requested square exclusions preserved | `src/components/narrative/scroll-narrative.tsx` | `f3c3595` | `main` | yes | Kept header controls, accordion blocks, and first-card right-side box square while rounding primary section shells |
 
+| 2026-05-22 10:36 | Built dedicated `/services` page with Tier 1+2 detail, Tier 3 placeholder, and full tooling stack narrative | `src/app/services/page.tsx`, `src/components/narrative/scroll-narrative.tsx` | `77cd005` | `main` | yes | Added services route sections for offers + tooling categories; updated home header Services nav to link `/services` |
+
 ## Current Next Steps
 1. Collect visual feedback for next large UI iteration.
