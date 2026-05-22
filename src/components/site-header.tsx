@@ -25,8 +25,9 @@ export function SiteHeader({ activeTab, homeAnchors = false }: SiteHeaderProps) 
     );
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-[#B6AE9FCC] backdrop-blur-md">
-      <div className="flex h-16 w-full items-stretch pl-4 pr-0 md:pl-8">
+    <>
+      <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-[#B6AE9FCC] backdrop-blur-md">
+        <div className="flex h-16 w-full items-stretch pl-4 pr-0 md:pl-8">
         <div className="ml-3 flex items-center gap-3 md:ml-5">
           <div className="flex size-10 items-center justify-center rounded-[999px] border-2 border-border bg-[#EABE6C] brutal-shadow">
             <CircleUserRound className="size-5" />
@@ -62,21 +63,25 @@ export function SiteHeader({ activeTab, homeAnchors = false }: SiteHeaderProps) 
         >
           Start Automating
         </Link>
-      </div>
+        </div>
+      </header>
       {isContactOpen ? (
-        <div className="fixed inset-0 z-[70] flex items-center justify-center bg-black/40 p-4">
-          <div className="relative max-h-[92vh] w-full max-w-2xl overflow-auto rounded-lg border-2 border-border bg-background p-5 brutal-shadow md:p-6">
-            <button
-              type="button"
-              onClick={() => setIsContactOpen(false)}
-              className="absolute right-3 top-3 rounded-md border-2 border-border bg-[#EABE6C] px-2 py-1 text-xs font-semibold uppercase tracking-[0.12em] brutal-shadow"
-            >
-              Close
-            </button>
-            <ContactForm />
+        <div className="fixed inset-0 z-[80] bg-black/45">
+          <div className="absolute left-1/2 top-1/2 w-[min(96vw,56rem)] -translate-x-1/2 -translate-y-1/2">
+            <div className="relative max-h-[88vh] overflow-auto rounded-xl border-2 border-border bg-background p-6 brutal-shadow md:p-8">
+              <button
+                type="button"
+                onClick={() => setIsContactOpen(false)}
+                aria-label="Close contact dialog"
+                className="absolute right-3 top-3 inline-flex size-9 items-center justify-center rounded-md border-2 border-border bg-[#EABE6C] text-lg font-black leading-none brutal-shadow"
+              >
+                X
+              </button>
+              <ContactForm />
+            </div>
           </div>
         </div>
       ) : null}
-    </header>
+    </>
   );
 }
